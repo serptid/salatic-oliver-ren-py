@@ -5,20 +5,22 @@ label endings_entry:
     scene black
     with fade
 
-    # Если ядро форсировало вирус — он имеет приоритет
-    if final_state == "virus" or virus_active:
+    # Вирус — только если не открыта ни одна человеческая концовка
+    if not (quins_done or nighstess_done or hospital_done or sand_done):
         jump end_virus
 
-    if final_state == "quins":
+    # Переходим только в те финалы, которые реально открыты
+    if final_state == "quins" and quins_done:
         jump end_quins
-    elif final_state == "nighstess":
+    elif final_state == "nighstess" and nighstess_done:
         jump end_nighstess
-    elif final_state == "hospital":
+    elif final_state == "hospital" and hospital_done:
         jump end_hospital
-    elif final_state == "sand":
+    elif final_state == "sand" and sand_done:
         jump end_sand
     else:
         jump end_default
+
 
 
 

@@ -1,5 +1,5 @@
 # scenes_act3.rpy
-# Акт III — Конфликт, схождение веток (линейный, но учитывает флаги)
+# Акт III — Конфликт (линейный, без вируса, без started-флагов)
 
 label act3_entry:
 
@@ -11,13 +11,8 @@ label act3_entry:
     oliver "Город дрожит."
     oliver "Как будто ему больно."
 
-    hamayumi "Ты держал слишком много вариантов в голове."
-    hamayumi "Система не любит неопределённость."
-
-    if virus_active:
-        play sound "audio/glitch_short.ogg"
-        hamayumi "И ещё."
-        hamayumi "Что-то чужое уже рядом."
+    hamayumi "Ты прошёл через чужие ответы."
+    hamayumi "Теперь они требуют формы."
 
     scene cyberspace_city
     with vpunch
@@ -25,132 +20,92 @@ label act3_entry:
     oliver "Что происходит?"
 
     hamayumi "Схождение."
-    hamayumi "Твои ответы начинают конфликтовать."
+    hamayumi "Не людей."
+    hamayumi "Аргументов."
 
     scene cyberspace_pause
     with dissolve
 
-    hamayumi "Сейчас появятся они."
-    hamayumi "Не как люди."
-    hamayumi "Как аргументы."
-
-    # --- Проявление Quins ---
-    if quins_started:
+    # Если открыта хотя бы одна человеческая концовка — показываем соответствующие “аргументы”
+    if quins_done:
         show quins at center
         with dissolve
 
-        quins "Ты затянул."
-        quins "Выход не любит колебаний."
+        quins "Выход не любит украшений."
+        quins "Он любит решение."
 
-        oliver "Я пытался понять."
+        oliver "Я сделал выбор?"
 
-        quins "Понимание без решения — это петля."
-        quins "Если ты хочешь домой — иди до конца."
+        quins "Ты сделал цену."
+        quins "Теперь сделай шаг."
 
         hide quins
         with dissolve
 
-    # --- Проявление Nighstess ---
-    if nighstess_started:
+    if nighstess_done:
         show nighstess at center
         with dissolve
 
-        nighstess "Ты называешь это конфликтом."
-        nighstess "Я называю это правдой: ты уже выбираешь."
+        nighstess "Ты ищешь дверь."
+        nighstess "А я предлагаю — жить внутри."
 
-        oliver "Я не выбирал."
+        oliver "Это не бегство?"
 
-        nighstess "Любая пауза — выбор."
-        nighstess "Любая надежда — выбор."
+        nighstess "Это форма."
+        nighstess "Форма честнее слова 'побег'."
 
         hide nighstess
         with dissolve
 
-    # --- Проявление Песка ---
-    if sand_started:
+    if sand_done:
         show sand at center
         with dissolve
 
-        sand "Система шумит, потому что ты требуешь от неё ответа."
-        sand "А ответы не обязаны существовать."
+        sand "Система шумит, потому что ты требуешь конца."
+        sand "А иногда конец — это пауза."
 
-        oliver "И что тогда?"
+        oliver "Пауза — это ничего?"
 
-        sand "Тогда останется только пауза."
-        sand "Если ты её выдержишь."
+        sand "Пауза — это выдержать."
+        sand "И не попросить упрощения."
 
         hide sand
         with dissolve
 
-    # --- Проявление Больницы ---
-    if hospital_started:
+    if hospital_done:
         scene hospital_room
         with dissolve
 
         play sound "audio/hospital_bleep.ogg"
 
         oliver "Палата…"
-        oliver "Я снова здесь?"
 
-        hamayumi "Это не возврат."
-        hamayumi "Это давление."
+        hamayumi "Не возврат."
+        hamayumi "Давление словом 'нормально'."
 
         scene cyberspace_pause
         with dissolve
 
-    # --- Вирусная инъекция (если активен) ---
-    if virus_active:
-        show zombi at center
-        with dissolve
+    # Если не открыта ни одна концовка — атмосфера “пустого ответа”
+    if not (quins_done or nighstess_done or sand_done or hospital_done):
+        hamayumi "Тишина без формы."
+        hamayumi "Ты дошёл, но не оформил ответ."
 
-        zombi "Слишком много голосов."
-        zombi "Хочешь тишину?"
-
-        hamayumi "Не отвечай."
-
-        zombi "Тишина — это контроль."
-        zombi "Контроль — это свобода, если ты устал."
-
-        hide zombi
-        with dissolve
-
-    # --- Ключевой момент: закрытие хаба ---
     scene cyberspace_city
     with fade
 
-    hamayumi "Хаб больше не доступен."
-    hamayumi "Дальше только ядро."
-
-    oliver "Ядро?"
-
+    hamayumi "Дальше — ядро."
     hamayumi "CORE NODE."
-    hamayumi "Там тебя заставят оформить состояние."
+    hamayumi "Там ты выберешь финальное состояние."
 
     if quins_done:
-        hamayumi "Quins оставила тебе шанс на выход."
+        hamayumi "Quins оставила тебе вариант выхода."
     if nighstess_done:
-        hamayumi "Nighstess оставил тебе шанс на принятие."
+        hamayumi "Nighstess оставил тебе вариант принятия."
     if sand_done:
-        hamayumi "Песок оставил тебе шанс на паузу."
+        hamayumi "Песок оставил тебе вариант паузы."
     if hospital_done:
-        hamayumi "Больница оставила тебе шанс на отрицание."
-
-    if virus_active:
-        hamayumi "А вирус оставил тебе шанс на пустоту."
-        hamayumi "Он заберёт его первым, если сможет."
-
-    scene cyberspace_void
-    with fade
-
-    oliver "А кто решает?"
-
-    hamayumi "Администратор."
-    hamayumi "MR_artemka."
-
-    oliver "Он бог?"
-
-    hamayumi "Он — правило."
-    hamayumi "А правило не спорит."
+        hamayumi "Больница оставила тебе вариант нормализации."
 
     stop music fadeout 2.0
 

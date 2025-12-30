@@ -1,5 +1,5 @@
 # scenes_core.rpy
-# CORE NODE — выбор концовки по открытым рутам
+# CORE NODE — выбор финального состояния только из открытых концовок
 
 label core_entry:
 
@@ -10,11 +10,6 @@ label core_entry:
 
     hamayumi "Дальше — ядро."
     hamayumi "Здесь не торгуются."
-
-    if virus_active:
-        play sound "audio/glitch_short.ogg"
-        hamayumi "И да."
-        hamayumi "Он уже рядом."
 
     scene cyberspace_core
     with dissolve
@@ -32,19 +27,7 @@ label core_entry:
     artemka "Я закрываю неопределённость."
 
     hamayumi "Он даст интерфейс."
-    hamayumi "Но кнопки появятся только там, где ты дошёл до конца."
-
-    # Если вирус активен — нет ручного выбора (как у тебя было)
-    if virus_active:
-        artemka "Обнаружено постороннее вмешательство."
-        artemka "Приоритет: безопасность."
-        artemka "Завершение будет выполнено автоматически."
-        hide artemka
-        with dissolve
-        stop music fadeout 1.0
-        $ final_state = "virus"
-        jump endings_entry
-
+    hamayumi "Но доступные варианты зависят от того, что ты оформил."
 
     scene cyberspace_core_ui
     with dissolve
@@ -53,58 +36,31 @@ label core_entry:
     artemka "Не конец."
     artemka "Форму."
 
-    # Если не открыт ни один рут — только default
+    # Если нет ни одной открытой человеческой концовки — отправляем в вирус через endings_entry
     if not (quins_done or nighstess_done or sand_done or hospital_done):
-        artemka "У тебя нет оформленного ответа."
-        artemka "Система применит значение по умолчанию."
-        $ final_state = "default"
-        jump core_finalize
+        $ final_state = "virus"
+        jump endings_entry
 
+    # Иначе показываем только открытые
     menu:
-        "SELECT ENDING"
+        "SELECT FINAL STATE"
 
-        "Quins: выход из киберспейса" if quins_done:
+        "Стабилизация: выход из киберспейса" if quins_done:
             $ final_state = "quins"
-            jump core_finalize
+            artemka "Принято."
+            jump endings_entry
 
-        "Nighstess: остаться осознанно" if nighstess_done:
+        "Стабилизация: непрерывное существование" if nighstess_done:
             $ final_state = "nighstess"
-            jump core_finalize
+            artemka "Принято."
+            jump endings_entry
 
-        "Sand: пауза без выбора" if sand_done:
+        "Стабилизация: пауза без выбора" if sand_done:
             $ final_state = "sand"
-            jump core_finalize
+            artemka "Принято."
+            jump endings_entry
 
-        "Hospital: нормализация реальности" if hospital_done:
+        "Стабилизация: нормализация реальности" if hospital_done:
             $ final_state = "hospital"
-            jump core_finalize
-
-
-label core_finalize:
-
-    scene cyberspace_core
-    with dissolve
-
-    artemka "Фиксация состояния."
-
-    if final_state == "quins":
-        artemka "Параметр: выход."
-    elif final_state == "nighstess":
-        artemka "Параметр: принятие."
-    elif final_state == "sand":
-        artemka "Параметр: пауза."
-    elif final_state == "hospital":
-        artemka "Параметр: нормализация."
-    elif final_state == "virus":
-        artemka "Параметр: вмешательство."
-    else:
-        artemka "Параметр: default."
-
-    hamayumi "Идём."
-
-    hide artemka
-    with dissolve
-
-    stop music fadeout 1.5
-
-    jump endings_entry
+            artemka "Принято."
+            jump endings_entry

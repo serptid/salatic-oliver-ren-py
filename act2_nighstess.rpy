@@ -1,55 +1,38 @@
-
 # -------------------------
 # Ветка Nighstess (5 экранов) — "инженерия принятия"
+# Открывает концовку Nighstess только при 3/3 правильных выборах
 # -------------------------
 
 label branch_nighstess:
 
-    if not nighstess_started:
-        $ nighstess_started = True
+    $ nighstess_score = 0
 
-        scene cyberspace_rooftop
-        with fade
+    scene cyberspace_rooftop
+    with fade
 
-        play music "audio/nighstess_theme.ogg" fadein 1.5
+    play music "audio/nighstess_theme.ogg" fadein 1.5
 
-        show nighstess at center
-        with dissolve
+    show nighstess at center
+    with dissolve
 
-        nighstess "Ты всё ещё ищешь выход?"
-        nighstess "Здесь никто не держит силой."
+    nighstess "Ты всё ещё ищешь выход?"
+    nighstess "Здесь никто не держит силой."
 
-        hamayumi "Он опасен спокойствием."
-
-    else:
-        scene cyberspace_rooftop
-        with dissolve
-        show nighstess at center
-        with dissolve
-
-        if trust_quins >= 2:
-            nighstess "Quins продаёт боль как смысл."
-            nighstess "Иногда это просто красивое название для страха."
-            $ quins_nighstess_conflict += 1
+    hamayumi "Он опасен спокойствием."
 
     menu:
         "Nighstess — тезис"
 
         "А если реальный мир хуже?":
-            $ nighstess_keys += 1
-            $ trust_nighstess += 1
-            $ identity_integrity += 1
+            $ nighstess_score += 1
             nighstess "Вот честный вопрос."
 
         "Это иллюзия.":
-            $ avoid_counter += 1
-            $ virus_debt += 1
             nighstess "И всё же ты здесь."
-            $ identity_integrity -= 1
+            hamayumi "Иллюзии тоже требуют участия."
 
         "Ты хочешь, чтобы я остался?":
             nighstess "Я хочу, чтобы ты не притворялся."
-            $ identity_integrity += 1
 
     scene cyberspace_pause
     with dissolve
@@ -61,19 +44,16 @@ label branch_nighstess:
         "Ответ"
 
         "А если бегство — форма выживания?":
-            $ nighstess_keys += 1
-            $ identity_integrity += 1
+            $ nighstess_score += 1
             nighstess "Тогда ты понимаешь."
 
         "Ты оправдываешь бегство.":
-            $ avoid_counter += 1
-            $ virus_debt += 1
             nighstess "Я называю вещи своими именами."
-            $ identity_integrity -= 1
+            hamayumi "Имя — это ещё не смысл."
 
         "Я ищу Quins.":
             nighstess "Тогда ты ищешь обещание."
-            $ quins_nighstess_conflict += 1
+            nighstess "И хочешь, чтобы оно было простым."
 
     scene cyberspace_simroom
     with dissolve
@@ -85,20 +65,16 @@ label branch_nighstess:
         "Оценка Nighstess"
 
         "Ты адаптировался.":
-            $ nighstess_keys += 1
-            $ trust_nighstess += 1
-            $ identity_integrity += 1
             nighstess "Наконец."
+            nighstess "Адаптация — не сдача."
 
         "Ты сломался.":
-            $ avoid_counter += 1
-            $ virus_debt += 1
             nighstess "Ломаются те, кто выходит."
-            $ identity_integrity -= 1
+            nighstess "Здесь просто меняют форму."
 
         "Ты боишься выйти снова.":
-            nighstess "Страх — не аргумент. Это данные."
-            $ identity_integrity += 1
+            nighstess "Страх — не аргумент."
+            nighstess "Это данные."
 
     scene cyberspace_rooftop
     with dissolve
@@ -110,47 +86,34 @@ label branch_nighstess:
         "Решение"
 
         "Я хочу остаться и принять это.":
-            $ nighstess_keys += 1
-            $ trust_nighstess += 1
-            $ identity_integrity += 1
+            $ nighstess_score += 1
             nighstess "Тогда у тебя будет режим в ядре."
 
         "Я не готов решать.":
-            $ avoid_counter += 1
-            $ virus_debt += 1
             nighstess "Тогда решат за тебя."
-            $ identity_integrity -= 1
+            hamayumi "И ты назовёшь это спокойствием."
 
         "Отдай мне автопилот.":
-            # Опасный выбор: спокойствие ценой голоса вируса
-            $ virus_debt += 2
-            $ virus_voice += 1
-            $ identity_integrity -= 1
             nighstess "Можно."
             nighstess "Но автопилот любит, когда ты исчезаешь из решения."
+            hamayumi "И тогда остаётся только маршрут."
 
     scene cyberspace_city
     with fade
 
-    if nighstess_keys >= 3 and not virus_active and virus_debt <= 3:
+    if nighstess_score == 3:
         $ nighstess_done = True
-        $ core_access_level += 2
-        $ trust_nighstess += 1
         nighstess "Я отметил твой вектор."
         nighstess "В ядре тебе дадут режим."
-        hamayumi "Это откроет хорошую концовку."
+        hamayumi "Это откроет её концовку."
     else:
-        $ avoid_counter += 1
+        $ nighstess_done = False
         nighstess "Ты ещё не выбрал."
         nighstess "Ты коллекционируешь слова."
-        if virus_voice >= 2:
-            nighstess "И кто-то уже выбирает формулировки за тебя."
+        hamayumi "Слова без решения — просто шум."
 
     hide nighstess
     with dissolve
 
     call ambient_reset
     jump act2_after_nighstess
-
-
-

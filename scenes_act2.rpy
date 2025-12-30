@@ -9,7 +9,6 @@ label act2_entry:
 
     jump branch_quins
 
-
 label act2_after_quins:
     scene cyberspace_city
     with dissolve
@@ -44,7 +43,6 @@ label act2_after_sand:
     hamayumi "Тебя возвращают."
 
     jump branch_hospital
-
 
 label act2_transition:
     scene cyberspace_city
