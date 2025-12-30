@@ -5,7 +5,7 @@
 # ------------------------------------------------------------
 
 label act2_entry:
-    scene cyberspace_city
+    scene bg cyberspace_city
     with dissolve
 
     play music "audio/act2_city.ogg" fadein 1.5
@@ -35,7 +35,7 @@ label act2_entry:
 # После Quins -> к Nighstess
 # ------------------------------------------------------------
 label act2_after_quins:
-    scene cyberspace_city
+    scene bg cyberspace_city
     with dissolve
     show hamayumi at center
     "После Quins город кажется строже."
@@ -74,9 +74,9 @@ label act2_after_quins:
 # После Nighstess -> к Sand
 # ------------------------------------------------------------
 label act2_after_nighstess:
-    scene cyberspace_pause
+    scene bg cyberspace_city
     with dissolve
-
+    show hamayumi at center
     stop music fadeout 1.0
     play music "audio/act2_pause.ogg" fadein 1.0
 
@@ -113,7 +113,7 @@ label act2_after_nighstess:
 # После Sand -> к Hospital
 # ------------------------------------------------------------
 label act2_after_sand:
-    scene cyberspace_edge
+    scene bg cyberspace_edge
     with dissolve
 
     stop music fadeout 1.0
@@ -123,7 +123,7 @@ label act2_after_sand:
     "Как будто ты стоишь AFK, а мир решает, выкидывать ли тебя с сервера."
     "Песок сыпется не вниз — в стороны."
     "Он заполняет пустоты между мыслями."
-
+    show hamayumi at center
     hamayumi "Тебя возвращают."
     hamayumi "Потому что неопределённость — это тоже нагрузка."
     hamayumi "А ядро не любит нагрузку без результата."
@@ -150,12 +150,12 @@ label act2_after_sand:
 # Общий переход в Акт 3 (после Hospital)
 # ------------------------------------------------------------
 label act2_transition:
-    scene cyberspace_city
+    scene bg cyberspace_edge
     with fade
 
     stop music fadeout 1.5
     play music "audio/act2_return.ogg" fadein 1.5
-
+    show hamayumi at center
     "Все линии сходятся."
     "Город снова целый."
     "Но теперь он выглядит иначе: как схема, которую собирали из твоих решений."

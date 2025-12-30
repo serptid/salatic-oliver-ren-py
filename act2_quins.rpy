@@ -7,7 +7,7 @@ label branch_quins:
 
     $ quins_score = 0
 
-    scene cyberspace_church
+    scene bg cyberspace_church
     with fade
 
     play music "audio/quins_theme.ogg" fadein 1.5
@@ -50,7 +50,7 @@ label branch_quins:
             oliver "Я… не знаю, что со мной…"
             quins "Знаешь. Просто больно признать."
     
-    scene cyberspace_tunnel
+    scene bg cyberspace_tunnel
     with dissolve
     show quins at left
     quins "Иногда выход выглядит как простая кнопка."
@@ -86,7 +86,7 @@ label branch_quins:
             oliver "Я… просто не хочу снова боль…"
             quins "Понимаю. И всё же — честность здесь бережнее."
 
-    scene cyberspace_market
+    scene bg cyberspace_market
     with dissolve
 
     show zombi at right
@@ -130,7 +130,7 @@ label branch_quins:
     hide zombi
     with dissolve
 
-    scene cyberspace_shaft
+    scene bg cyberspace_tunnel
     with dissolve
     show quins at center
 
@@ -161,7 +161,7 @@ label branch_quins:
             oliver "Я… цепляюсь…"
             quins "Тогда я помогу тебе отпустить — мягко."
 
-    scene cyberspace_church
+    scene bg cyberspace_church
     with fade
     show quins at center
     if quins_score == 3:
