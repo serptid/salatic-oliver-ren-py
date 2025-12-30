@@ -60,24 +60,40 @@ label hub_menu:
             call hub_status
             jump hub_main
 
-        "Тихий тоннель (Quins)" if not quins_done:
+        "Тихий тоннель " if not quins_done:
             $ branch_visits_quins += 1
             call branch_quins
             jump hub_main
 
-        "Крыша мегаблока (Nighstess)" if not nighstess_done:
+        "Тихий тоннель" if quins_done:
+            hamayumi "Эта ветка уже пройдена."
+            jump hub_main
+
+        "Крыша мегаблока " if not nighstess_done:
             $ branch_visits_nighstess += 1
             call branch_nighstess
             jump hub_main
 
-        "Край города (Песок Песочнеков)" if not sand_done:
+        "Крыша мегаблока" if nighstess_done:
+            hamayumi "Эта ветка уже пройдена."
+            jump hub_main
+
+        "Край города " if not sand_done:
             $ branch_visits_sand += 1
             call branch_sand
             jump hub_main
 
-        "Белый шум (Больница)" if not hospital_done:
+        "Край города" if sand_done:
+            hamayumi "Эта ветка уже пройдена."
+            jump hub_main
+
+        "Белый шум " if not hospital_done:
             $ branch_visits_hospital += 1
             call branch_hospital
+            jump hub_main
+
+        "Белый шум" if hospital_done:
+            hamayumi "Эта ветка уже пройдена."
             jump hub_main
 
         "Рынок патчей (опасно)":
@@ -85,7 +101,7 @@ label hub_menu:
             call patch_market
             jump hub_main
 
-        "Случайная встреча (ВаняЗолотов)":
+        "Случайная встреча ":
             call cameo_vanya
             jump hub_main
 
@@ -102,7 +118,7 @@ label hub_menu:
             $ avoid_counter += 1
             oliver "..."
             hamayumi "Это тоже выбор."
-            jump hub_main
+            jump act3_entry
 
 
 # -------------------------
