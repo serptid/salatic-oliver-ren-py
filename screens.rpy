@@ -323,13 +323,10 @@ screen navigation():
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
-            ## Помощь не необходима и не относится к мобильным устройствам.
-            textbutton _("Помощь") action ShowMenu("help")
+            textbutton _("Помощь небудет") action ShowMenu("help")
 
         if renpy.variant("pc"):
 
-            ## Кнопка выхода блокирована в iOS и не нужна на Android и в веб-
-            ## версии.
             textbutton _("Выход") action Quit(confirm=not main_menu)
 
 
@@ -356,7 +353,8 @@ screen main_menu():
     ## заменять этот.
     tag menu
 
-    add gui.main_menu_background
+    add gui.main_menu_background xysize (config.screen_width, config.screen_height)
+
 
     ## Эта пустая рамка затеняет главное меню.
     frame:
@@ -421,9 +419,10 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
     style_prefix "game_menu"
 
     if main_menu:
-        add gui.main_menu_background
+        add gui.main_menu_background xysize (config.screen_width, config.screen_height)
     else:
-        add gui.game_menu_background
+        add gui.game_menu_background xysize (config.screen_width, config.screen_height)
+
 
     frame:
         style "game_menu_outer_frame"

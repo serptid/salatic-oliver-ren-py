@@ -13,13 +13,14 @@ label act1_entry:
 
     oliver "Белые стены."
     oliver "Запах лекарств."
-    oliver "Они говорят — это реальность."
+    oliver "Они говорят - это реальность."
 
     pause 0.5
 
-    oliver "Но если это так — почему она кажется такой хрупкой?"
+    oliver "Но если это так?"
+    oliver "почему она кажется такой не настоящей?"
 
-    scene hospital_room
+    scene bg hospital_room
     with dissolve
 
     oliver "Я здесь не первый раз."
@@ -47,8 +48,6 @@ label act1_entry:
 
     oliver "..."
 
-    scene hospital_room
-    with vpunch
 
     oliver "Мир дрогнул."
 
@@ -60,6 +59,9 @@ label act1_entry:
 
     oliver "Мысли стали тяжёлыми."
     oliver "А потом — слишком лёгкими."
+
+    scene bg cyberspace_void
+    with fade
 
     pause 0.5
     voice "audio/Hamayumi/SteosVoice 102006.mp3"
@@ -85,9 +87,6 @@ label act1_entry:
     voice "audio/Hamayumi/SteosVoice 451442.mp3"
     hamayumi "А интерфейсы иногда дают сбой."
 
-    scene cyberspace_void
-    with dissolve
-
     play music "audio/ambient_cyberspace.ogg" fadein 2.0
 
     oliver "Где я?"
@@ -106,7 +105,7 @@ label act1_entry:
 
     pause 0.5
 
-    scene cyberspace_city
+    scene bg cyberspace_city
     with fade
 
     oliver "Город..."
