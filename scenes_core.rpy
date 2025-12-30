@@ -10,16 +10,16 @@ label core_entry:
 
 label core_select:
 
-    scene cyberspace_void
+    scene bg cyberspace_void
     with fade
 
     play music "audio/core_node.ogg" fadein 1.5
-
+    show hamayumi at center
     hamayumi "Дальше — ядро."
     hamayumi "Здесь не торгуются."
     hamayumi "Здесь фиксируют."
 
-    scene cyberspace_core
+    scene bg cyberspace_core
     with dissolve
 
     show artemka at center
@@ -35,12 +35,14 @@ label core_select:
     artemka "Я закрываю неопределённость."
     artemka "Не лечу."
     artemka "Компилирую."
-
+    hide artemka
+    show hamayumi at right
+    show artemka at left
     hamayumi "Он даст интерфейс."
     hamayumi "Но доступные варианты зависят от того, что ты оформил."
     hamayumi "В ядре нельзя 'попробовать'."
 
-    scene cyberspace_core_ui
+    scene bg cyberspace_core_ui
     with dissolve
 
     artemka "SELECT FINAL STATE."

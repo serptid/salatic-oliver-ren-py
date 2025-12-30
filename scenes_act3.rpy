@@ -4,7 +4,7 @@
 
 label act3_entry:
 
-    scene cyberspace_city
+    scene bg cyberspace_city
     with fade
 
     play music "audio/act3_conflict.ogg" fadein 1.0
@@ -16,7 +16,7 @@ label act3_entry:
     hamayumi "Не людей."
     hamayumi "Аргументов."
 
-    scene cyberspace_city
+    scene bg cyberspace_city
     with vpunch
 
     "Вывески перегорают."
@@ -30,7 +30,7 @@ label act3_entry:
     hamayumi "Только попытки назвать тебя вместо тебя."
 
     # --- Микро-файт: аргументы появляются быстро и перебивают друг друга ---
-    scene cyberspace_pause
+    scene bg cyberspace_pause
     with dissolve
 
     if quins_done:
@@ -55,11 +55,11 @@ label act3_entry:
         with dissolve
 
     if hospital_done:
-        scene hospital_room
+        scene bg hospital_room
         with dissolve
         play sound "audio/hospital_bleep.ogg"
         "Белый свет режет мысль."
-        scene cyberspace_pause
+        scene bg cyberspace_pause
         with dissolve
 
     if not (quins_done or nighstess_done or sand_done or hospital_done):
@@ -68,7 +68,7 @@ label act3_entry:
         hamayumi "Тебя будут брать не смыслом — усталостью."
 
     # --- Перелом: город пытается выбрать за героя ---
-    scene cyberspace_city
+    scene bg cyberspace_city
     with vpunch
 
     "Город сжимается."
@@ -88,7 +88,7 @@ label act3_entry:
 
     stop music fadeout 1.5
 
-    scene cyberspace_core_gate
+    scene bg cyberspace_core_gate
     with fade
 
     "Впереди — CORE NODE."

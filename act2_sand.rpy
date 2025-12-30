@@ -15,11 +15,11 @@ label branch_sand:
     # -------------------------
     # Экран 1 — край (биом/граница)
     # -------------------------
-    scene cyberspace_edge
+    scene bg cyberspace_edge
     with fade
 
     play music "audio/sand_theme.ogg" fadein 1.5
-
+    show hamayumi at left
     hamayumi "Край."
     hamayumi "Тут система перестаёт объяснять."
     hamayumi "Как будто ты дошёл до границы биома — дальше только песок."
@@ -64,9 +64,10 @@ label branch_sand:
     # -------------------------
     # Экран 2 — пустыня (процесс вместо цели)
     # -------------------------
-    scene cyberspace_desert
+    scene bg cyberspace_tunnel
     with dissolve
-
+    show sand at right
+    show hamayumi at left
     sand "Здесь не зовут остаться."
     sand "И не тянут выйти."
     sand "Как сервер без правил: хочешь — копай песок всю ночь."
@@ -106,7 +107,6 @@ label branch_sand:
     # -------------------------
     # Экран 3 — следы (не люди, а состояния)
     # -------------------------
-    scene cyberspace_desert
     with dissolve
 
     sand "Те следы — не люди."
@@ -149,7 +149,6 @@ label branch_sand:
     # -------------------------
     # Экран 4 — граница ядра (неопределённость)
     # -------------------------
-    scene cyberspace_edge
     with dissolve
 
     sand "Даже ядро не любит неопределённость."
@@ -164,7 +163,6 @@ label branch_sand:
     # -------------------------
     # Экран 5 — итог + поворот
     # -------------------------
-    scene cyberspace_edge
     with fade
 
     if sand_score == 3:

@@ -13,7 +13,7 @@ label branch_hospital:
     # локальный флаг поворота (не обязателен, но пригодится для актов дальше)
     $ hospital_twist_seen = False
 
-    scene hospital_room
+    scene bg hospital
     with fade
 
     play music "audio/ambient_hospital.ogg" fadein 1.5
@@ -33,10 +33,9 @@ label branch_hospital:
     # -------------------------
     # Экран 2 — Кабинет врача
     # -------------------------
-    scene hospital_office
     with dissolve
 
-    show doctor at center
+    show doctor at right
     with dissolve
 
     doctor "Салатик Оливер."
@@ -131,7 +130,7 @@ label branch_hospital:
     # -------------------------
     # Экран 3 — Палата: трудность/ломка привычки
     # -------------------------
-    scene hospital_room
+    scene bg hospital_room
     with dissolve
 
     hamayumi "Ты стираешь меня словами."
@@ -176,7 +175,7 @@ label branch_hospital:
     # -------------------------
     # Экран 4 — Поворот: "лечат" не то
     # -------------------------
-    scene hospital_corridor
+    
     with fade
 
     # маленький "разрыв": больница ведёт себя как система
@@ -236,9 +235,9 @@ label branch_hospital:
     # -------------------------
     # Экран 5 — Процедурная / столкновение двух миров
     # -------------------------
-    scene hospital_procedure
+    scene bg hospital
     with dissolve
-
+    show hamayumi at left
     oliver "Здесь холоднее."
 
     hamayumi "И свет другой."
@@ -279,7 +278,7 @@ label branch_hospital:
     # -------------------------
     # Экран 6 — Итог ветки
     # -------------------------
-    scene hospital_room
+    scene bg hospital_room
     with fade
 
     if hospital_score >= 3:

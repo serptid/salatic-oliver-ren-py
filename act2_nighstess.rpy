@@ -11,7 +11,7 @@ label branch_nighstess:
     # -------------------------
     # Экран 1 — вход
     # -------------------------
-    scene cyberspace_rooftop
+    scene bg cyberspace_street
     with fade
 
     play music "audio/nighstess_theme.ogg" fadein 1.5
@@ -57,7 +57,7 @@ label branch_nighstess:
     # -------------------------
     # Экран 2 — пауза/разметка понятий
     # -------------------------
-    scene cyberspace_pause
+    scene bg cyberspace_pause
     with dissolve
     show nighstess at center
     nighstess "В реальности ты диагноз."
@@ -99,7 +99,7 @@ label branch_nighstess:
     # -------------------------
     # Экран 7 — возвращение на крышу: решение (3-й балл)
     # -------------------------
-    scene cyberspace_rooftop
+    scene bg cyberspace_street
     with dissolve
     show nighstess at right
     nighstess "Я не переписываю тебя."
@@ -131,7 +131,7 @@ label branch_nighstess:
     # -------------------------
     # Экран 8 — итог и флаг
     # -------------------------
-    scene cyberspace_city
+    scene bg cyberspace_precore
     with fade
 
     if nighstess_score == 3:

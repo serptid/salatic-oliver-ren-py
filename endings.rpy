@@ -7,7 +7,7 @@
 
 label endings_entry:
 
-    scene black
+    scene bg black
     with fade
 
     if final_state == "quins":
@@ -31,14 +31,14 @@ label end_quins:
 
     play music "audio/ending_quins.ogg" fadein 2.0
 
-    scene cyberspace_shaft
+    scene bg cyberspace_city
     with fade
 
     quins "Пора домой."
 
     oliver "Я выбираю… дом."
 
-    scene hospital_room
+    scene bg hospital_room
     with dissolve
 
     "Монитор работает."
@@ -71,7 +71,7 @@ label end_nighstess:
 
     play music "audio/ending_nighstess.ogg" fadein 2.0
 
-    scene cyberspace_rooftop
+    scene bg cyberspace_tunnel
     with fade
 
     nighstess "Добро пожаловать не в тюрьму."
@@ -82,7 +82,7 @@ label end_nighstess:
     oliver "Понимаю."
     oliver "И больше не называю это временным."
 
-    scene cyberspace_city
+    scene bg cyberspace_city
     with dissolve
 
     "Город работает ровно."
@@ -104,7 +104,7 @@ label end_sand:
 
     play music "audio/ending_sand.ogg" fadein 2.0
 
-    scene cyberspace_desert
+    scene bg cyberspace_core
     with fade
 
     sand "Ты не выиграл."
@@ -112,7 +112,7 @@ label end_sand:
 
     hamayumi "Тогда просто… будь."
 
-    scene cyberspace_desert
+    scene bg cyberspace_core_ui
     with dissolve
 
     "Мир не ускоряется."
@@ -132,7 +132,7 @@ label end_hospital:
 
     play music "audio/ending_hospital.ogg" fadein 2.0
 
-    scene hospital_room
+    scene bg hospital_room
     with fade
 
     oliver "Белый свет."
