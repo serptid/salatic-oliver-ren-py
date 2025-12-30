@@ -12,9 +12,10 @@ label branch_quins:
 
     play music "audio/quins_theme.ogg" fadein 1.5
 
+    show hamayumi at left
     hamayumi "Тут чинят головы."
     hamayumi "Иногда — вместе с человеком."
-
+    hide hamayumi
     show quins at center
     with dissolve
 
@@ -48,10 +49,10 @@ label branch_quins:
             quins "Но если сила — чтобы перестать чувствовать, ты потеряешь себя."
             oliver "Я… не знаю, что со мной…"
             quins "Знаешь. Просто больно признать."
-
+    
     scene cyberspace_tunnel
     with dissolve
-
+    show quins at left
     quins "Иногда выход выглядит как простая кнопка."
     quins "Но цена почти всегда — кусочек памяти."
     quins "Я не заставлю тебя. Я только помогу выбрать честно."
@@ -88,7 +89,9 @@ label branch_quins:
     scene cyberspace_market
     with dissolve
 
-    show zombi at center
+    show zombi at right
+    
+    show quins at left
     with dissolve
 
     zombi "О, вы вдвоём."
@@ -129,6 +132,7 @@ label branch_quins:
 
     scene cyberspace_shaft
     with dissolve
+    show quins at center
 
     quins "Выход — не дверь."
     quins "Это готовность не прятаться, даже когда внутри шумно."
@@ -159,7 +163,7 @@ label branch_quins:
 
     scene cyberspace_church
     with fade
-
+    show quins at center
     if quins_score == 3:
         $ quins_done = True
         quins "Я запомнила твою траекторию."

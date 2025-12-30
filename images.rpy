@@ -14,4 +14,23 @@ image nurse = Transform(
     "gui/images/ch/nurse.png",
     ysize=int(config.screen_height * 0.9)
 )
-
+image hamayumi = Transform(
+    "gui/images/ch/Hamayumi/norm.png",
+    ysize=int(config.screen_height * 0.9),
+    xysize=(int(config.screen_width * 0.5), int(config.screen_height * 0.9))
+)
+image quins = Transform(
+    "gui/images/ch/quins/quins.png",
+    ysize=int(config.screen_height * 0.9),
+    xysize=(int(config.screen_width * 0.5), int(config.screen_height * 0.9))
+)
+image zombi = Transform(
+    "gui/images/ch/zombi/norm.png",
+    ysize=int(config.screen_height * 0.9),
+    xysize=(int(config.screen_width * 0.5), int(config.screen_height * 0.9))
+)
+image nighstess = Transform(
+    "gui/images/ch/nighstess/norm.png",
+    ysize=int(config.screen_height * 0.9),
+    xysize=(int(config.screen_width * 0.5), int(config.screen_height * 0.9))
+)

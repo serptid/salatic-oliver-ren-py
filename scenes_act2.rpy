@@ -37,7 +37,7 @@ label act2_entry:
 label act2_after_quins:
     scene cyberspace_city
     with dissolve
-
+    show hamayumi at center
     "После Quins город кажется строже."
     "Как будто тебя измерили и отпустили."
     "Не осудили. Не приняли."
@@ -66,7 +66,7 @@ label act2_after_quins:
     "Переход не происходит сразу."
     "Сначала город 'гасит' лишние улицы."
     "Дороги складываются в одну прямую линию — к крыше."
-
+    hide hamayumi
     jump branch_nighstess
 
 

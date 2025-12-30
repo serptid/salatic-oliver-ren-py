@@ -64,6 +64,7 @@ label act1_entry:
     with fade
 
     pause 0.5
+    show hamayumi at left
     voice "audio/Hamayumi/SteosVoice 102006.mp3"
     hamayumi "Не пугайся."
 
@@ -112,6 +113,7 @@ label act1_entry:
 
     oliver "Он живой."
 
+    show hamayumi at left
     hamayumi "Он реагирует на тебя."
     hamayumi "Пока ты здесь — ты существуешь."
 

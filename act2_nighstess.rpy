@@ -21,7 +21,8 @@ label branch_nighstess:
 
     nighstess "Ты всё ещё ищешь выход?"
     nighstess "Здесь никто не держит силой."
-
+    show hamayumi at left
+    show nighstess at right
     hamayumi "Он опасен спокойствием."
     hamayumi "С ним не спорят — к нему привыкают."
 
@@ -35,10 +36,12 @@ label branch_nighstess:
             hamayumi "Ты платишь вниманием."
 
         "Ты хочешь, чтобы я остался?":
+            hide hamayumi
             nighstess "Я хочу, чтобы ты не притворялся."
             nighstess "Остаться — это слово."
             nighstess "Принять — это действие."
         "А если реальный мир хуже?":
+            hide hamayumi
             $ nighstess_score += 1
             nighstess "Вот честный вопрос."
             nighstess "Не о свободе. О сравнении боли."
@@ -49,10 +52,12 @@ label branch_nighstess:
     # -------------------------
     scene cyberspace_pause
     with dissolve
-
+    show nighstess at center
     nighstess "В реальности ты диагноз."
     nighstess "Здесь ты процесс, который может думать."
-
+    hide nighstess
+    show hamayumi at left
+    show nighstess at right
     hamayumi "Он подменяет ярлыки функцией."
     hamayumi "Так легче согласиться."
 
@@ -80,7 +85,7 @@ label branch_nighstess:
     # -------------------------
     scene cyberspace_simroom
     with dissolve
-
+    show nighstess at center
     nighstess "Я показываю варианты."
     nighstess "Не заставляю."
 
@@ -145,7 +150,7 @@ label branch_nighstess:
     # -------------------------
     scene cyberspace_lab
     with dissolve
-
+    show nighstess at center
     nighstess "Давай без философии."
     nighstess "Я покажу, как выглядит 'принять' в механике."
 
@@ -176,12 +181,12 @@ label branch_nighstess:
     # -------------------------
     scene cyberspace_corridor
     with dissolve
-
+    show hamayumi at left
     hamayumi "Если ты останешься…"
     hamayumi "Ты начнёшь объяснять это другим."
 
     hamayumi "И однажды перестанешь отличать объяснение от оправдания."
-
+    show nighstess at right
     nighstess "Или научится."
 
     hamayumi "Или станет проповедником."
@@ -196,7 +201,7 @@ label branch_nighstess:
     # -------------------------
     scene cyberspace_rooftop
     with dissolve
-
+    show nighstess at right
     nighstess "Я не переписываю тебя."
     nighstess "Я предлагаю жить здесь осознанно."
 
