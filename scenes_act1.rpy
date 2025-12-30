@@ -62,23 +62,27 @@ label act1_entry:
     oliver "А потом — слишком лёгкими."
 
     pause 0.5
-
+    voice "audio/Hamayumi/SteosVoice 102006.mp3"
     hamayumi "Не пугайся."
 
     oliver "Кто это?"
-
+    voice "audio/Hamayumi/SteosVoice 399984.mp3"
     hamayumi "Я — Хамаюми."
+    voice "audio/Hamayumi/SteosVoice 689791.mp3"
     hamayumi "Ты всегда слышал меня."
+    voice "audio/Hamayumi/SteosVoice 386062.mp3"
     hamayumi "Просто теперь — чётко."
 
     oliver "Я схожу с ума?"
-
+    voice "audio/Hamayumi/SteosVoice 680731.mp3"
     hamayumi "Нет."
+    voice "audio/Hamayumi/SteosVoice 803360.mp3"
     hamayumi "Ты теряешь фильтры."
 
     pause 0.5
-
+    voice "audio/Hamayumi/SteosVoice 560869.mp3"
     hamayumi "Реальность — это интерфейс."
+    voice "audio/Hamayumi/SteosVoice 451442.mp3"
     hamayumi "А интерфейсы иногда дают сбой."
 
     scene cyberspace_void
@@ -89,8 +93,9 @@ label act1_entry:
     oliver "Где я?"
 
     oliver "Это не сон."
-
+    voice "audio/Hamayumi/SteosVoice 815244.mp3"
     hamayumi "Верно."
+    voice "audio/Hamayumi/SteosVoice 307458.mp3"
     hamayumi "Это киберспейс."
 
     oliver "Интернет?"
