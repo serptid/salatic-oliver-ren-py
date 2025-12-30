@@ -52,3 +52,10 @@ default quins_nighstess_conflict = 0 # конфликт идеологий
 default hospital_trace = 0           # след “больницы” в киберспейсе
 default sand_trace = 0               # след “песка” в киберспейсе
 default core_access_level = 0        # сколько режимов будет доступно в ядре
+
+default quins_done = False
+default nighstess_done = False
+default sand_done = False
+default hospital_done = False
+default virus_active = False
+default final_state = "default"

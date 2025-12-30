@@ -1,5 +1,5 @@
 # scenes_core.rpy
-# Акт IV — CORE NODE (точка невозврата) + переход в финалы
+# CORE NODE — выбор концовки по открытым рутам
 
 label core_entry:
 
@@ -31,27 +31,21 @@ label core_entry:
     artemka "Я администратор."
     artemka "Я закрываю неопределённость."
 
-    oliver "Значит, выбора нет."
-
-    artemka "Неверно."
-    artemka "Выбор есть всегда."
-    artemka "Но не всегда он оформлен."
-
     hamayumi "Он даст интерфейс."
-    hamayumi "Но доступные варианты зависят от того, что ты сделал."
+    hamayumi "Но кнопки появятся только там, где ты дошёл до конца."
 
+    # Если вирус активен — нет ручного выбора (как у тебя было)
     if virus_active:
         artemka "Обнаружено постороннее вмешательство."
         artemka "Приоритет: безопасность."
         artemka "Завершение будет выполнено автоматически."
-
         hide artemka
         with dissolve
-
         stop music fadeout 1.0
+        $ final_state = "virus"
         jump endings_entry
 
-    # Системный экран: выбор состояния (не концовки)
+
     scene cyberspace_core_ui
     with dissolve
 
@@ -59,40 +53,31 @@ label core_entry:
     artemka "Не конец."
     artemka "Форму."
 
-    # Если доступен хотя бы один "осознанный" путь — даём выбрать форму.
-    # Если ничего не оформлено — одна кнопка (default).
-    if quins_done or nighstess_done or sand_done or hospital_done:
-
-        menu:
-            "SELECT FINAL STATE"
-
-            "Стабилизация: выход из киберспейса" if quins_done:
-                $ final_state = "quins"
-                artemka "Принято."
-                jump core_finalize
-
-            "Стабилизация: непрерывное существование" if nighstess_done:
-                $ final_state = "nighstess"
-                artemka "Принято."
-                jump core_finalize
-
-            "Стабилизация: пауза без выбора" if sand_done:
-                $ final_state = "sand"
-                artemka "Принято."
-                jump core_finalize
-
-            "Стабилизация: нормализация реальности" if hospital_done:
-                $ final_state = "hospital"
-                artemka "Принято."
-                jump core_finalize
-
-    else:
-
+    # Если не открыт ни один рут — только default
+    if not (quins_done or nighstess_done or sand_done or hospital_done):
         artemka "У тебя нет оформленного ответа."
         artemka "Система применит значение по умолчанию."
-
         $ final_state = "default"
         jump core_finalize
+
+    menu:
+        "SELECT ENDING"
+
+        "Quins: выход из киберспейса" if quins_done:
+            $ final_state = "quins"
+            jump core_finalize
+
+        "Nighstess: остаться осознанно" if nighstess_done:
+            $ final_state = "nighstess"
+            jump core_finalize
+
+        "Sand: пауза без выбора" if sand_done:
+            $ final_state = "sand"
+            jump core_finalize
+
+        "Hospital: нормализация реальности" if hospital_done:
+            $ final_state = "hospital"
+            jump core_finalize
 
 
 label core_finalize:
@@ -109,7 +94,9 @@ label core_finalize:
     elif final_state == "sand":
         artemka "Параметр: пауза."
     elif final_state == "hospital":
-        artemka "Параметр: отрицание."
+        artemka "Параметр: нормализация."
+    elif final_state == "virus":
+        artemka "Параметр: вмешательство."
     else:
         artemka "Параметр: default."
 
@@ -120,5 +107,4 @@ label core_finalize:
 
     stop music fadeout 1.5
 
-    # Переход в файл endings.rpy (там окончательная развязка)
     jump endings_entry

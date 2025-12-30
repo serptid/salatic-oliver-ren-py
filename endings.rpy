@@ -1,27 +1,25 @@
 # endings.rpy
 # Финалы. Игрок не выбирает концовку напрямую.
-
 label endings_entry:
 
     scene black
     with fade
 
-    if virus_active:
+    # Если ядро форсировало вирус — он имеет приоритет
+    if final_state == "virus" or virus_active:
         jump end_virus
 
-    if quins_done:
+    if final_state == "quins":
         jump end_quins
-
-    if nighstess_done:
+    elif final_state == "nighstess":
         jump end_nighstess
-
-    if hospital_done:
+    elif final_state == "hospital":
         jump end_hospital
-
-    if sand_done:
+    elif final_state == "sand":
         jump end_sand
+    else:
+        jump end_default
 
-    jump end_default
 
 
 label end_quins:
