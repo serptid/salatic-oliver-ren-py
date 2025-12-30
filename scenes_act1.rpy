@@ -131,4 +131,4 @@ label act1_entry:
 
     stop music fadeout 2.0
 
-    return
+    jump act2_entry
