@@ -18,5 +18,3 @@ define artemka  = Character("MR_artemka")
 define doctor   = Character("Врач")
 
 define nurse    = Character("Медсестра")
-
-define vanya    = Character("ВаняЗолотов")
