@@ -1,0 +1,8 @@
+define o = Character("Салатик Оливер")
+define h = Character("Хамаюми", what_prefix="«", what_suffix="»")
+define q = Character("Quins")
+define n = Character("Nighstess")
+define a = Character("MR_artemka")
+define z = Character("SeryogaZOMbi")
+define p = Character("Песок Песочнеков")
+define v = Character("ВаняЗолотов")
