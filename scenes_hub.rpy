@@ -1,30 +1,18 @@
 # scenes_hub.rpy
 # Хаб Акта II + ветки персонажей + глобальный триггер вируса
 
+
+# NOTE: initial `default` variables are declared in `state.rpy` to
+# avoid duplicate-default errors. This file assumes those variables
+# already exist and only uses/updates them.
+
 label hub_main:
 
     scene cyberspace_city
     with dissolve
 
-    $ hub_visits += 1
-
-    if hub_visits == 2:
-        hamayumi "Выбирай направление."
-        hamayumi "Но не пытайся удержать все ответы сразу."
-
-    if hub_visits >= 6 and not (quins_done or nighstess_done or sand_done or hospital_done):
-        hamayumi "Ты слишком долго ходишь кругами."
-        hamayumi "Система это заметит."
-        $ avoid_counter += 1
-
-    if avoid_counter >= 3:
-        $ virus_risk += 1
-
-    if virus_risk >= 3:
-        $ virus_active = True
-
-    if virus_active:
-        call zombi_whisper
+    # Централизованное обновление состояния хаба (DRY — don't repeat yourself).
+    call hub_update_state
 
     if quins_done or nighstess_done or sand_done or hospital_done:
         hamayumi "Один путь уже оформился."
@@ -46,6 +34,9 @@ label hub_menu:
 
     menu:
         "Куда идти?"
+        "Статус хаба (диагностика)":
+            call hub_status
+            jump hub_main
         "Тихий тоннель (Quins)" if not quins_done:
             $ branch_visits_quins += 1
             call branch_quins
@@ -85,6 +76,52 @@ label hub_menu:
 # -------------------------
 # Глобальные вставки
 # -------------------------
+
+
+label hub_update_state:
+
+    # Универсальная логика обновления хаба.
+    $ hub_visits += 1
+
+    if hub_visits == 2:
+        hamayumi "Выбирай направление."
+        hamayumi "Но не пытайся удержать все ответы сразу."
+
+    if hub_visits >= 6 and not (quins_done or nighstess_done or sand_done or hospital_done):
+        hamayumi "Ты слишком долго ходишь кругами."
+        hamayumi "Система это заметит."
+        $ avoid_counter += 1
+
+    if avoid_counter >= 3:
+        $ virus_risk += 1
+
+    if virus_risk >= 3:
+        $ virus_active = True
+
+    if virus_active:
+        call zombi_whisper
+
+    return
+
+
+label ambient_reset:
+
+    # Восстановление фоновой музыки хаба — используется в конце веток.
+    stop music fadeout 1.0
+    play music "audio/ambient_cyberspace.ogg" fadein 1.0
+    return
+
+
+label hub_status:
+
+    # Простой диагностический вывод состояния хаба; возвращает в меню.
+    python:
+        renpy.say(None, "Статус хаба: посещений {}, избегал {}, риск вируса {}, вирус активен {}".format(hub_visits, avoid_counter, virus_risk, virus_active))
+
+    menu:
+        "Назад":
+            return
+
 
 label zombi_whisper:
 
@@ -142,8 +179,7 @@ label patch_market:
     hide zombi
     with dissolve
 
-    stop music fadeout 1.0
-    play music "audio/ambient_cyberspace.ogg" fadein 1.0
+    call ambient_reset
 
     return
 
@@ -299,8 +335,7 @@ label branch_quins:
     hide quins
     with dissolve
 
-    stop music fadeout 1.0
-    play music "audio/ambient_cyberspace.ogg" fadein 1.0
+    call ambient_reset
 
     return
 
@@ -411,8 +446,7 @@ label branch_nighstess:
     hide nighstess
     with dissolve
 
-    stop music fadeout 1.0
-    play music "audio/ambient_cyberspace.ogg" fadein 1.0
+    call ambient_reset
 
     return
 
@@ -514,8 +548,7 @@ label branch_sand:
     hide sand
     with dissolve
 
-    stop music fadeout 1.0
-    play music "audio/ambient_cyberspace.ogg" fadein 1.0
+    call ambient_reset
 
     return
 
@@ -620,7 +653,6 @@ label branch_hospital:
         hamayumi "Ты сомневаешься."
         hamayumi "Значит, связь ещё держится."
 
-    stop music fadeout 1.0
-    play music "audio/ambient_cyberspace.ogg" fadein 1.0
+    call ambient_reset
 
     return
