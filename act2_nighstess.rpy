@@ -1,6 +1,6 @@
 # ------------------------------------------------------------
 # branch_nighstess.rpy
-# Ветка Nighstess (расширенная) — "инженерия принятия"
+# Ветка Nighstess (расширенная) - "инженерия принятия"
 # Открывает концовку Nighstess только при 3/3 правильных выборах
 # ------------------------------------------------------------
 
@@ -9,12 +9,12 @@ label branch_nighstess:
     $ nighstess_score = 0
 
     # -------------------------
-    # Экран 1 — вход
+    # Экран 1 - вход
     # -------------------------
     scene bg cyberspace_street
     with fade
 
-    play music "audio/nighstess_theme.ogg" fadein 1.5
+    play music "audio/music/nightass.mp3" fadein 2.0 loop volume 0.008
 
     show nighstess at center
     with dissolve
@@ -31,7 +31,7 @@ label branch_nighstess:
     voice "audio/Hamayumi/nightass/1.mp3"
     hamayumi "Он опасен спокойствием."
     voice "audio/Hamayumi/nightass/2.mp3"
-    hamayumi "С ним не спорят — к нему привыкают."
+    hamayumi "С ним не спорят - к нему привыкают."
 
     oliver "Он чё"
     oliver "Афтаритет тут какойто"
@@ -51,8 +51,8 @@ label branch_nighstess:
         "Тут не хочеться существовать.. это не реальность.":
             hide hamayumi
             nighstess "Я хочу, чтобы ты не притворялся."
-            nighstess "Остаться — это слово."
-            nighstess "Принять — это действие."
+            nighstess "Остаться - это слово."
+            nighstess "Принять - это действие."
 
         "А если реальный мир хуже?":
             hide hamayumi
@@ -63,7 +63,7 @@ label branch_nighstess:
             oliver "Навсегда!"
 
     # -------------------------
-    # Экран 2 — пауза/разметка понятий
+    # Экран 2 - пауза/разметка понятий
     # -------------------------
     scene bg cyberspace_pause
     with dissolve
@@ -90,30 +90,30 @@ label branch_nighstess:
     menu:
         "Ответ"
 
-        "А если бегство — форма выживания?":
+        "А если бегство - форма выживания?":
             $ nighstess_score += 1
             oliver "Типо неважно где и как быть и существовать"
             oliver "Жизнь она такая филосовская"
             nighstess "Тогда ты понимаешь."
-            nighstess "Выживание — не позор."
-            nighstess "Позор — делать вид, что это не выбор."
+            nighstess "Выживание - не позор."
+            nighstess "Позор - делать вид, что это не выбор."
 
         "Ты оправдываешь бегство.":
             oliver "Нет во всем этом смысла"
             nighstess "Я называю вещи своими именами."
             voice "audio/Hamayumi/nightass/7.mp3"
-            hamayumi "Имя — это ещё не смысл."
+            hamayumi "Имя - это ещё не смысл."
             voice "audio/Hamayumi/nightass/8.mp3"
-            hamayumi "Смысл — в том, что ты сделаешь дальше."
+            hamayumi "Смысл - в том, что ты сделаешь дальше."
 
         "Я ищу Quins.":
             oliver "Верни мне моего фембойчика"
             nighstess "Тогда ты ищешь обещание."
             nighstess "И хочешь, чтобы оно было простым."
-            nighstess "Но простое обещание — всегда ловушка."
+            nighstess "Но простое обещание - всегда ловушка."
 
     # -------------------------
-    # Экран 7 — возвращение на крышу
+    # Экран 7 - возвращение на крышу
     # -------------------------
     scene bg cyberspace_street
     with dissolve
@@ -131,17 +131,17 @@ label branch_nighstess:
         "Я не готов решать.":
             nighstess "Тогда решат за тебя."
             voice "audio/Hamayumi/nightass/9.mp3"
-            hamayumi "И ты назовёшь это спокойствием."
+            hamayumi "Он всегда добовляет эту строчку."
             voice "audio/Hamayumi/nightass/10.mp3"
-            hamayumi "Потому что так проще выдержать стыд."
+            hamayumi "Как подпись под контрактом."
 
         "Отдай мне автопилот.":
             nighstess "Можно."
             nighstess "Но автопилот любит, когда ты исчезаешь из решения."
             voice "audio/Hamayumi/nightass/11.mp3"
-            hamayumi "И тогда остаётся только маршрут."
+            hamayumi "Меняют форму… и называют это зрелостью."
             voice "audio/Hamayumi/nightass/12.mp3"
-            hamayumi "Без твоего имени."
+            hamayumi "И данные обычно используют против тебя."
 
         "Я хочу остаться и принять это.":
             $ nighstess_score += 1
@@ -150,7 +150,7 @@ label branch_nighstess:
             nighstess "Интерфейс ответственности."
 
     # -------------------------
-    # Экран 8 — итог и флаг
+    # Экран 8 - итог и флаг
     # -------------------------
     scene bg cyberspace_precore
     with fade
@@ -167,19 +167,19 @@ label branch_nighstess:
         oliver "Что с вами всеми сделал киберспек"
 
         voice "audio/Hamayumi/nightass/13.mp3"
-        hamayumi "Это откроет её концовку."
+        hamayumi "Он поднимает ставку."
         voice "audio/Hamayumi/nightass/14.mp3"
-        hamayumi "Но помни: режим — это инструмент."
+        hamayumi "Не угрозой. Контекстом."
         voice "audio/Hamayumi/nightass/15.mp3"
-        hamayumi "Инструменты любят становиться привычкой."
+        hamayumi "И он сейчас попробует купить у тебя это право."
     else:
         $ nighstess_done = False
         nighstess "Ты ещё не выбрал."
         nighstess "Ты коллекционируешь слова."
         oliver "Прости найтес но ты мне просто друг"
-        voice "audio/Hamayumi/nightass/16.mp3"
-        hamayumi "Слова без решения — просто шум."
-        voice "audio/Hamayumi/nightass/17.mp3"
+        voice "audio/Hamayumi/nightass/33.mp3"
+        hamayumi "Слова без решения — просто шум.."
+        voice "audio/Hamayumi/nightass/34.mp3"
         hamayumi "А шум — идеальная маскировка страха."
 
     hide nighstess

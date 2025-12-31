@@ -2,10 +2,10 @@ init python:
     SW = config.screen_width
     SH = config.screen_height
 #Фоны
-image bg hospital_room = Transform("gui/images/bg/hospital.png", xysize=(SW, SH))
+image bg hospital_room = Transform("gui/images/bg/hospital_room.png", xysize=(SW, SH))
+image bg hospital = Transform("gui/images/bg/hospital.png", xysize=(SW, SH))
 image bg cyberspace_city = Transform("gui/images/bg/cyberspace_city.png", xysize=(SW, SH))
 image bg cyberspace_void = Transform("gui/images/bg/cyberspace_void.png", xysize=(SW, SH))
-image bg hospital_office = Transform("images/hospital_office.png", xysize=(SW, SH))
 image bg cyberspace_church = Transform("gui/images/bg/cyberspace_church.png", xysize=(SW, SH))
 image bg cyberspace_tunnel = Transform("gui/images/bg/cyberspace_tunnel.png", xysize=(SW, SH))
 image bg cyberspace_market = Transform("gui/images/bg/cyberspace_market.png", xysize=(SW, SH))
@@ -13,10 +13,10 @@ image bg cyberspace_street = Transform("gui/images/bg/cyberspace_street.png", xy
 image bg cyberspace_pause = Transform("gui/images/bg/cyberspace_pause.png", xysize=(SW, SH))
 image bg cyberspace_precore = Transform("gui/images/bg/cyberspace_precore.png", xysize=(SW, SH))
 image bg cyberspace_edge = Transform("gui/images/bg/cyberspace_edge.png", xysize=(SW, SH))
-image bg hospital = Transform("gui/images/bg/hospital.png", xysize=(SW, SH))
 image bg cyberspace_core = Transform("gui/images/bg/cyberspace_core.png", xysize=(SW, SH))
 image bg cyberspace_core_ui = Transform("gui/images/bg/cyberspace_core_ui.png", xysize=(SW, SH))
-
+image bg desktop_fake = Transform("gui/images/bg/desktop_fake.jpg", xysize=(SW, SH))
+image bg virus = Transform("gui/images/bg/virus.png", xysize=(SW, SH))
 
 #Персонажи
 image nurse = Transform(

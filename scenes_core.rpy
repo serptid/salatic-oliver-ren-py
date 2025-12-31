@@ -1,8 +1,8 @@
 # scenes_core.rpy
-# CORE NODE — финальный выбор
+# CORE NODE - финальный выбор
 # Правка: если игрок НЕ выбирает ни одну концовку (уходит в отмены/петлю),
 # ядро через лимит отмен отправляет в virus.
-# Если не открыто ничего — тоже virus.
+# Если не открыто ничего - тоже virus.
 
 label core_entry:
 
@@ -13,11 +13,11 @@ label core_select:
     scene bg cyberspace_void
     with fade
 
-    play music "audio/core_node.ogg" fadein 1.5
+    play music "audio/music/mrartem.mp3" fadein 2.0 loop volume 0.008
     show hamayumi at center
     hamayumi "Край."
     voice "audio/Hamayumi/scen_core/1.mp3"
-    hamayumi "Дальше — ядро."
+    hamayumi "Дальше - ядро."
     voice "audio/Hamayumi/scen_core/2.mp3"
     hamayumi "Здесь не торгуются."
     voice "audio/Hamayumi/scen_core/3.mp3"
@@ -34,6 +34,9 @@ label core_select:
     artemka "Статус: нестабильный."
 
     oliver "Ты MR_artemka."
+    oliver "Тёма"
+    oliver "Что такое этот ваш киберспек"
+    oliver "..."
 
     artemka "Я администратор."
     artemka "Я закрываю неопределённость."
@@ -58,15 +61,18 @@ label core_select:
     artemka "SELECT FINAL STATE."
     artemka "Выбор необратим."
     artemka "Подтверждение потребуется."
+    oliver "Вы с серёгой чё вообще ебу дали"
+    oliver "Хватит мне уже голову марочить"
+    oliver "Что такое киберсейс ваш А А"
 
-    # Если нет ни одной открытой человеческой концовки — сразу вирус
+    # Если нет ни одной открытой человеческой концовки - сразу вирус
     if not (quins_done or nighstess_done or sand_done or hospital_done):
         artemka "Доступных состояний: 0."
         artemka "Назначение: FALLBACK."
         $ final_state = "virus"
         jump endings_entry
 
-    # Если игрок слишком много раз отменяет — ядро закрывает неопределённость вирусом
+    # Если игрок слишком много раз отменяет - ядро закрывает неопределённость вирусом
     if core_cancel_count >= 3:
         artemka "Обнаружена рекурсивная отмена."
         artemka "Неопределённость превышает лимит."
@@ -77,7 +83,7 @@ label core_select:
     menu:
         "SELECT FINAL STATE"
 
-        "Стабилизация: выход из киберспейса" if quins_done:
+        "Стабилизация: выход из киберспейса с любовью" if quins_done:
             artemka "Параметры: разрыв связи. Возврат в физический контур."
             
             voice "audio/Hamayumi/scen_core/7.mp3"
@@ -96,7 +102,7 @@ label core_select:
                     artemka "Отмена принята."
                     jump core_select
 
-        "Стабилизация: непрерывное существование" if nighstess_done:
+        "Стабилизация: непрерывное существование с другом" if nighstess_done:
             artemka "Параметры: закрепление в среде. Режим ядра."
             
             voice "audio/Hamayumi/scen_core/9.mp3"
@@ -115,7 +121,7 @@ label core_select:
                     artemka "Отмена принята."
                     jump core_select
 
-        "Стабилизация: пауза без выбора" if sand_done:
+        "Стабилизация: пауза без выбора с мечтой" if sand_done:
             artemka "Параметры: нейтральный контур. Снижение требований."
             
             voice "audio/Hamayumi/scen_core/11.mp3"
@@ -134,7 +140,7 @@ label core_select:
                     artemka "Отмена принята."
                     jump core_select
 
-        "Стабилизация: нормализация реальности" if hospital_done:
+        "Стабилизация: нормализация реальности с самим собой" if hospital_done:
             
             artemka "Параметры: приоритет физического объяснения. Снижение символов."
             voice "audio/Hamayumi/scen_core/13.mp3"

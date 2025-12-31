@@ -1,5 +1,5 @@
 # scenes_act1.rpy
-# Акт I — Вход в киберспейс
+# Акт I - Вход в киберспейс
 # Линейный, без выборов
 
 label act1_entry:
@@ -7,7 +7,7 @@ label act1_entry:
     scene black
     with fade
 
-    play music "audio/ambient_hospital.ogg" fadein 2.0
+    play music "audio/music/start.mp3" fadein 2.0 loop volume 0.05
 
     oliver "..."
     oliver "ГДЕ Я !!!"
@@ -43,19 +43,18 @@ label act1_entry:
 
     pause 0.5
 
-    play sound "audio/injection.ogg"
 
     "..."
     "Мир дрогнул."
 
     stop music fadeout 1.5
-    play music "audio/ambient_transition.ogg" fadein 1.5
+    play music "audio/music/start2.mp3" fadein 2.0 loop volume 0.008
 
     scene black
     with fade
 
     "Мысли стали тяжёлыми."
-    "А потом — слишком лёгкими."
+    "А потом - слишком лёгкими."
 
     scene bg cyberspace_void
     with fade
@@ -68,7 +67,7 @@ label act1_entry:
     oliver "Кто это? Хамаюми?"
 
     voice "audio/Hamayumi/act_1/2.mp3"
-    hamayumi "Я — Хамаюми."
+    hamayumi "Я - Хамаюми."
 
     oliver "Привет Матвей."
 
@@ -76,7 +75,7 @@ label act1_entry:
     hamayumi "Ты всегда слышал меня."
 
     voice "audio/Hamayumi/act_1/4.mp3"
-    hamayumi "Просто теперь — чётко."
+    hamayumi "Просто теперь - чётко."
 
     oliver "Чего?"
     oliver "У тебя новый микрофон чтоле"
@@ -91,14 +90,14 @@ label act1_entry:
 
     pause 0.5
     voice "audio/Hamayumi/act_1/7.mp3"
-    hamayumi "Реальность — это интерфейс."
+    hamayumi "Реальность - это интерфейс."
     voice "audio/Hamayumi/act_1/8.mp3"
     hamayumi "А интерфейсы иногда дают сбой."
 
     oliver "Ааа Я кажеться понялоа"
     oliver "Ты типо хочешь стать стримером и купил себе фулл сет!"
     oliver "Мониторы и микрофон."
-    play music "audio/ambient_cyberspace.ogg" fadein 2.0
+
 
 
     voice "audio/Hamayumi/act_1/9.mp3"
@@ -133,7 +132,7 @@ label act1_entry:
     voice "audio/Hamayumi/act_1/14.mp3"
     hamayumi "Он реагирует на тебя."
     voice "audio/Hamayumi/act_1/15.mp3"
-    hamayumi "Пока ты здесь — ты существуешь."
+    hamayumi "Пока ты здесь - ты существуешь."
 
     oliver "Я хочу домой"
     oliver "Как отсюда выбраться"
@@ -143,7 +142,7 @@ label act1_entry:
 
     pause 0.5
     voice "audio/Hamayumi/act_1/17.mp3"
-    hamayumi "Сейчас — запомни главное."
+    hamayumi "Сейчас - запомни главное."
     voice "audio/Hamayumi/act_1/18.mp3"
     hamayumi "Киберспейс не держит силой."
     voice "audio/Hamayumi/act_1/19.mp3"

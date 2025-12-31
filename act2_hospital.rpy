@@ -1,6 +1,6 @@
 # ------------------------------------------------------------
 # branch_hospital.rpy
-# Ветка Больницы (расширенная) — "перепрошивка интерпретации"
+# Ветка Больницы (расширенная) - "перепрошивка интерпретации"
 # Открывает концовку Hospital только при 3/3 правильных выборах
 # Добавлено: трудности, сюжетный поворот, "двойная интерпретация"
 # ------------------------------------------------------------
@@ -16,7 +16,7 @@ label branch_hospital:
     scene bg hospital
     with fade
 
-    play music "audio/ambient_hospital.ogg" fadein 1.5
+    play music "audio/music/durka.mp3" fadein 2.0 loop volume 0.008
 
     oliver "Белый свет."
     oliver "Слишком реальный."
@@ -24,18 +24,18 @@ label branch_hospital:
     voice "audio/Hamayumi/klinika/1.mp3"
     hamayumi "Это пробой."
     voice "audio/Hamayumi/klinika/2.mp3"
-    hamayumi "Если ты примешь его — киберспейс отступит."
+    hamayumi "Если ты примешь его - киберспейс отступит."
 
-    oliver "Если это всё симптом…"
+    oliver "Если это всё симптом..."
     oliver "Тогда я могу остановить это."
 
     voice "audio/Hamayumi/klinika/3.mp3"
     hamayumi "Ты уверен, что хочешь, чтобы тебя 'починили'?"
     voice "audio/Hamayumi/klinika/4.mp3"
-    hamayumi "Иногда чинят не боль — а память о ней."
+    hamayumi "Иногда чинят не боль - а память о ней."
 
     # -------------------------
-    # Экран 2 — Кабинет врача
+    # Экран 2 - Кабинет врача
     # -------------------------
     with dissolve
 
@@ -49,20 +49,20 @@ label branch_hospital:
     voice "audio/Hamayumi/klinika/5.mp3"
     hamayumi "Слышишь?"
     voice "audio/Hamayumi/klinika/6.mp3"
-    hamayumi "Факты — это форма контроля."
+    hamayumi "Факты - это форма контроля."
     voice "audio/Hamayumi/klinika/7.mp3"
     hamayumi "Но иногда она спасает."
 
     menu:
         "Ответ врачу"
 
-        "Это фантазии. Просто шум.":
+        "Я видел taruma":
             doctor "Хорошо."
             doctor "Мы назовём это и перестанем подпитывать."
             voice "audio/Hamayumi/klinika/8.mp3"
-            hamayumi "Иногда название — это клетка."
+            hamayumi "Иногда название - это клетка."
             voice "audio/Hamayumi/klinika/9.mp3"
-            hamayumi "Если ты назвал — тебя можно отучать."
+            hamayumi "Если ты назвал - тебя можно отучать."
 
         "Я видел Quins.":
             doctor "Мы разберём это позже."
@@ -72,7 +72,7 @@ label branch_hospital:
             voice "audio/Hamayumi/klinika/11.mp3"
             hamayumi "Имя удобно: его можно объявить симптомом."
 
-        "Я видел город.":
+        "Я видел NightASS.":
             doctor "Это реакция на стресс."
             doctor "Мозг достраивает среду, чтобы выдержать нагрузку."
             voice "audio/Hamayumi/klinika/12.mp3"
@@ -83,13 +83,13 @@ label branch_hospital:
         "Я не уверен. Но это влияет на выбор.":
             $ hospital_score += 1
             doctor "Это честный ответ."
-            doctor "Сомнение — не провал. Это наблюдение."
+            doctor "Сомнение - не провал. Это наблюдение."
             voice "audio/Hamayumi/klinika/14.mp3"
             hamayumi "Честность держит тебя целым."
 
     doctor "Мы попробуем простую штуку."
     doctor "Я дам вам 'якорь'."
-    doctor "Если начнёт уносить — держитесь за него."
+    doctor "Если начнёт уносить - держитесь за него."
 
     doctor "Скажите: какая сегодня дата?"
 
@@ -101,10 +101,10 @@ label branch_hospital:
             doctor "Правильно."
             doctor "Не фантазировать. Проверять."
             voice "audio/Hamayumi/klinika/15.mp3"
-            hamayumi "Проверка — это выбор, который не зависит от страха."
+            hamayumi "Проверка - это выбор, который не зависит от страха."
 
         "Любая. Здесь время не важно.":
-            doctor "Для вас — важно."
+            doctor "Для вас - важно."
             doctor "Это основа ориентации."
             voice "audio/Hamayumi/klinika/16.mp3"
             hamayumi "Он ставит рамку."
@@ -117,7 +117,7 @@ label branch_hospital:
             voice "audio/Hamayumi/klinika/18.mp3"
             hamayumi "Удобно."
             voice "audio/Hamayumi/klinika/19.mp3"
-            hamayumi "Когда за тебя фиксируют — ты перестаёшь держать сам."
+            hamayumi "Когда за тебя фиксируют - ты перестаёшь держать сам."
 
     doctor "Ещё вопрос."
     doctor "Кто такой Хамаюми?"
@@ -146,15 +146,20 @@ label branch_hospital:
         "Это часть киберпространства.":
             doctor "Тогда тем более нужно якорение."
             voice "audio/Hamayumi/klinika/24.mp3"
-            hamayumi "И тем более тебе страшно признать, что я — часть тебя."
+            hamayumi "И тем более тебе страшно признать, что я - часть тебя."
+
+        "Он моя тульпа":
+            doctor "Тогда тем более нужно якорение."
+            doctor "Он тебя портит"
+
 
     hide doctor
     with dissolve
 
     # -------------------------
-    # Экран 3 — Палата
+    # Экран 3 - Палата
     # -------------------------
-    scene bg hospital_room
+    scene bg hospital
     with dissolve
 
     voice "audio/Hamayumi/klinika/25.mp3"
@@ -171,10 +176,10 @@ label branch_hospital:
     voice "audio/Hamayumi/klinika/29.mp3"
     hamayumi "А привычка сильнее аргументов."
 
-    "Тишина" "Пииии—"
-    "Тишина" "Пииии—"
+    "Тишина" "Пииии-"
+    "Тишина" "Пииии-"
 
-    oliver "Монитор…"
+    oliver "Монитор..."
     oliver "Он звучит как таймер."
 
     voice "audio/Hamayumi/klinika/30.mp3"
@@ -189,36 +194,36 @@ label branch_hospital:
     menu:
         "Что делать?"
 
-        "Позвать врача и закрыть это":
+        "Позвать врача и попросить удалить кибспек":
             voice "audio/Hamayumi/klinika/34.mp3"
             hamayumi "..."
             "Тишина становится слишком удобной."
             "В голове появляется мысль: 'пусть решат за меня'."
 
-        "Остановиться и поверить Хамаюми":
+        "Остановиться и провести проверку Хамаюми":
             $ hospital_score += 1
             voice "audio/Hamayumi/klinika/35.mp3"
             hamayumi "Тогда ты ещё держишься."
             voice "audio/Hamayumi/klinika/36.mp3"
-            hamayumi "Поверить — не значит подчиниться."
+            hamayumi "Поверить - не значит подчиниться."
             voice "audio/Hamayumi/klinika/37.mp3"
             hamayumi "Значит признать: часть тебя защищается так, как умеет."
 
-        "Промолчать":
+        "Стерпеть":
             voice "audio/Hamayumi/klinika/38.mp3"
             hamayumi "Понял."
             "Молчание не выбирает сторону."
-            "Но молчание — идеальная почва для чужих выводов."
+            "Но молчание - идеальная почва для чужих выводов."
 
     # -------------------------
-    # Экран 4 — Поворот
+    # Экран 4 - Поворот
     # -------------------------
     with fade
 
     "Голос по громкой связи" "Пациент Оливер. Подготовка к процедуре. Палата 12."
 
     oliver "Процедуре?"
-    oliver "Мне никто не говорил…"
+    oliver "Мне никто не говорил..."
 
     voice "audio/Hamayumi/klinika/39.mp3"
     hamayumi "Момент, где реальность становится сценой."
@@ -233,7 +238,7 @@ label branch_hospital:
     voice "audio/Hamayumi/klinika/40.mp3"
     hamayumi "Слушай формулировки."
     voice "audio/Hamayumi/klinika/41.mp3"
-    hamayumi "'Проще' — это не 'лучше'."
+    hamayumi "'Проще' - это не 'лучше'."
 
     oliver "Что за процедура?"
 
@@ -273,13 +278,13 @@ label branch_hospital:
             nurse "Вы можете отказаться."
             nurse "Но тогда будет сложнее."
             voice "audio/Hamayumi/klinika/49.mp3"
-            hamayumi "Сложнее — значит: тебе придётся выдерживать себя самому."
+            hamayumi "Сложнее - значит: тебе придётся выдерживать себя самому."
 
     hide nurse
     with dissolve
 
     # -------------------------
-    # Экран 5 — Процедурная
+    # Экран 5 - Процедурная
     # -------------------------
     scene bg hospital
     with dissolve
@@ -298,7 +303,8 @@ label branch_hospital:
     "Система" "Снижение значимости символических связей..."
     "Система" "Отключение вторичных нарративов..."
 
-    oliver "Это... звучит как ядро."
+    oliver "Это... звучит как холодильник."
+    oliver "пять ночей... но это похоже на ядро..."
 
     voice "audio/Hamayumi/klinika/53.mp3"
     hamayumi "Потому что это и есть ядро."
@@ -310,7 +316,7 @@ label branch_hospital:
 
         "Держаться за якорь: проверять, что реально.":
             $ hospital_score += 1
-            oliver "Дата. Место. Имя."
+            oliver "Дата. Место. Имя. ЯКОРЬ..."
             oliver "Я проверяю, а не угадываю."
             voice "audio/Hamayumi/klinika/55.mp3"
             hamayumi "Вот это перепрошивка."
@@ -323,7 +329,7 @@ label branch_hospital:
             voice "audio/Hamayumi/klinika/57.mp3"
             hamayumi "Вот так и делают 'легко'."
             voice "audio/Hamayumi/klinika/58.mp3"
-            hamayumi "Когда легко — ты перестаёшь держать форму."
+            hamayumi "Когда легко - ты перестаёшь держать форму."
 
         "Закричать, вырваться, сломать.":
             "Руки дрожат."
@@ -334,14 +340,14 @@ label branch_hospital:
             hamayumi "Ты тратишь силы, не удерживая смысл."
 
     # -------------------------
-    # Экран 6 — Итог ветки
+    # Экран 6 - Итог ветки
     # -------------------------
     scene bg hospital_room
     with fade
 
     if hospital_score >= 3:
         $ hospital_done = True
-        oliver "Если я перестану давать этому власть — оно ослабнет."
+        oliver "Если я перестану давать этому власть - оно ослабнет."
         oliver "Но я не обязан стирать часть себя, чтобы жить."
         voice "audio/Hamayumi/klinika/61.mp3"
         hamayumi "Тогда в ядре у тебя останется только реальность."

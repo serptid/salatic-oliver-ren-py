@@ -68,10 +68,10 @@ define gui.name_text_font = "CHAOS16.otf"
 define gui.interface_text_font = "CHAOS16.otf"
 
 ## Размер нормального текста диалога.
-define gui.text_size = 50
+define gui.text_size = 70
 
 ## Размер имён персонажей.
-define gui.name_text_size = 55
+define gui.name_text_size = 75
 
 ## Размер текста в пользовательском интерфейсе.
 define gui.interface_text_size = 50

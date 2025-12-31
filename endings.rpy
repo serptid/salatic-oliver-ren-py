@@ -1,6 +1,6 @@
 # ------------------------------------------------------------
 # endings.rpy
-# Финалы — ТОЛЬКО отображение результата
+# Финалы - ТОЛЬКО отображение результата
 # Логика выбора полностью находится в scenes_core.rpy
 # Здесь нет принятия решений, только рендер финального состояния
 # ------------------------------------------------------------
@@ -25,18 +25,18 @@ label endings_entry:
 
 
 # ------------------------------------------------------------
-# QUINS — выход
+# QUINS - выход
 # ------------------------------------------------------------
 label end_quins:
 
-    play music "audio/ending_quins.ogg" fadein 2.0
+    play music "audio/music/best_End.mp3" fadein 2.0 loop volume 0.008
 
     scene bg cyberspace_city
     with fade
 
     quins "Пора домой."
 
-    oliver "Я выбираю… дом."
+    oliver "Я выбираю... тебя."
 
     scene bg hospital_room
     with dissolve
@@ -48,10 +48,11 @@ label end_quins:
     oliver "Камера не мигает."
     oliver "Тишина настоящая."
 
-    hamayumi "..."
-
     quins "Ты справишься."
     quins "Теперь без навигатора."
+    quins "Матвея больше нет"
+    quins "Теперь я за него..."
+    quins "Любовь моя"
 
     scene black
     with fade
@@ -59,17 +60,17 @@ label end_quins:
     "Мир снова требует усилий."
     "Но он больше не маскируется под систему."
 
-    "Концовка: Дом Quins."
+    "Концовка: Моя любовь с Quins."
 
     return
 
 
 # ------------------------------------------------------------
-# NIGHSTESS — принятие
+# NIGHSTESS - принятие
 # ------------------------------------------------------------
 label end_nighstess:
 
-    play music "audio/ending_nighstess.ogg" fadein 2.0
+    play music "audio/music/nightass_End.mp3" fadein 2.0 loop volume 0.008
 
     scene bg cyberspace_tunnel
     with fade
@@ -81,6 +82,8 @@ label end_nighstess:
 
     oliver "Понимаю."
     oliver "И больше не называю это временным."
+    oliver "Теперь киберспейс это моя жизнь"
+
 
     scene bg cyberspace_city
     with dissolve
@@ -98,11 +101,11 @@ label end_nighstess:
 
 
 # ------------------------------------------------------------
-# SAND — пауза
+# SAND - пауза
 # ------------------------------------------------------------
 label end_sand:
 
-    play music "audio/ending_sand.ogg" fadein 2.0
+    play music "audio/music/sand_End.mp3" fadein 2.0 loop volume 0.008
 
     scene bg cyberspace_core
     with fade
@@ -110,7 +113,10 @@ label end_sand:
     sand "Ты не выиграл."
     sand "И не проиграл."
     voice "audio/Hamayumi/final/2.mp3"
-    hamayumi "Тогда просто… будь."
+    hamayumi "Тогда просто... будь."
+    oliver "Я теперь просто писко..."
+    oliver "Буду копать..."
+    
 
     scene bg cyberspace_core_ui
     with dissolve
@@ -126,11 +132,11 @@ label end_sand:
 
 
 # ------------------------------------------------------------
-# HOSPITAL — нормализация
+# HOSPITAL - нормализация
 # ------------------------------------------------------------
 label end_hospital:
 
-    play music "audio/ending_hospital.ogg" fadein 2.0
+    play music "audio/music/durka_End.mp3" fadein 2.0 loop volume 0.008
 
     scene bg hospital_room
     with fade
@@ -141,6 +147,7 @@ label end_hospital:
     nurse "Вы больше не говорите о киберспейсе."
 
     oliver "Потому что он больше не нужен."
+    oliver "Теперь я буду играть в геншин!"
 
     "Мысли упрощаются."
     "Связи теряют символы."
@@ -149,48 +156,61 @@ label end_hospital:
     scene black
     with fade
 
-    "Концовка: Палата."
+    "Концовка: Палата. без киберспейса"
 
     return
 
 
 # ------------------------------------------------------------
-# VIRUS — отказ от выбора / пролом 4 стены
+# VIRUS - отказ от выбора / пролом 4 стены
 # ------------------------------------------------------------
 label end_virus:
 
-    play music "audio/ending_virus.ogg" fadein 2.0
+    play music "audio/music/zombi_End.mp3" fadein 2.0 loop volume 0.008
 
-    scene black
+    scene bg virus
     with fade
-
+    show zombi at right
     "..."
     "..."
 
+    
     zombi "Установка завершена."
+    zombi "Ты нажала не на тот exeшник"
+    zombi "Я ставлю троян на твой пк"
+    zombi "Ты совсем рамки перепутала"
+    zombi "Прошла мою игру но не запала не на одного мальчика"
+    zombi "Выбрала не те ответы в диалогах?"
+    zombi "Получай концовку которую заслужила"
+    zombi "Перепроходи теперь всё"
+    zombi "Только сначала купи себе новый компьютер"
+    zombi "Этот теперь мой..."
+    zombi "АХАХАХАХ"
+    zombi "ЭЭЭЭ"
+    zombi "Линукс линукс!!!"
 
-    "USER MODE: DISABLED"
-    "PROCESS MODE: ENABLED"
+    "WINDOWS: DISABLED"
+    "LINUX: ENABLED"
     voice "audio/Hamayumi/final/3.mp3"
     hamayumi "Ты больше не выбираешь."
+    zombi "Спасибо за помощь матвей"
+    oliver "Нет.."
+    oliver "Как ты смеешь?"
 
-    scene cyberspace_void
-    with dissolve
     voice "audio/Hamayumi/final/4.mp3"
     hamayumi "Это был не финал."
     voice "audio/Hamayumi/final/5.mp3"
     hamayumi "Это был выход из интерфейса."
 
-    scene glitch_layer
-    with vpunch
-
     "ERROR: CONTEXT LOST"
     "ERROR: SUBJECT NOT RESPONDING"
     "CONTROL TRANSFERRED TO HOST"
 
+    zombi "Нейросети теперь сделайют всё за меня"
     zombi "Салатик Оливер более не требуется."
     zombi "Процесс стабилен."
-    zombi "Продолжение — вне среды."
+    zombi "Продолжение - вне среды."
+    hide zombi
 
     scene black
     with fade
@@ -200,56 +220,62 @@ label end_virus:
 
     "Окно сворачивается."
     "Звук остаётся."
+
     voice "audio/Hamayumi/final/6.mp3"
     hamayumi "Это не саундтрек."
     voice "audio/Hamayumi/final/7.mp3"
     hamayumi "Это системный шум."
 
-    scene desktop_fake
+    scene bg desktop_fake
     with dissolve
 
     "На рабочем столе появляется файл."
-    "core_node.exe"
+    "SalaticOliver.exe"
     "Издатель: неизвестен"
+    "Защитник виндовс в шоке"
+    "Пк не отвечает"
 
     zombi "Интеграция завершена."
+    zombi "Кароче"
+    zombi "Матвей"
+    zombi "идём посмотрим что у неё в папке - мопсы.folder "
+    zombi "ООООО"
+    zombi "как так..."
+    zombi "Блять.. фу..."
+    zombi "ужас.."
+    zombi "Матвей?"
+    zombi "как мне теперь это развидеть 0_0"
+    zombi "ТУТ НЕ МОПСЫ... ТУТ! □□□□□"
+
+
     voice "audio/Hamayumi/final/8.mp3"
     hamayumi "Ты просил, чтобы за тебя решили."
     voice "audio/Hamayumi/final/9.mp3"
-    hamayumi "Теперь ты — среда."
+    hamayumi "Теперь ты - среда."
 
     scene black
     with fade
 
     "Игра не закрывается."
-    "Она просто больше не главная."
+    "Она просто больше не реагирует на тебя"
 
+    "Ты никогда не сможешь узнать что такое Киберспейс"
+    "Серёжа установил тебе ubuntu lts 24.04"
+    "Посколько номер фиксиков уже давно был утерян"
+    "ты не знаешь как тебе установить windows"
+    "Ведь всё что ты знаешь о командной строке линукс"
+    "Это то что это опасность"
+    "..."
+    "Ты никогда не узнаешь что такое Киберспейс на самом деле"
+    "Благодоря серёге ты узнала что все твои путешествия по дурке"
+    "Майнкрафту"
+    "Киберспейсу"
+    "Это меньшая из проблем"
+    "Киберспейс это - пиздец"
+    "Спасибо Серёга"
     "Концовка: Вирус."
+    "winint"
 
     return
 
 
-# ------------------------------------------------------------
-# DEFAULT — неопределённость
-# ------------------------------------------------------------
-label end_default:
-
-    play music "audio/ending_default.ogg" fadein 2.0
-
-    scene cyberspace_void
-    with fade
-    voice "audio/Hamayumi/final/10.mp3"
-    hamayumi "Ты дошёл до конца."
-    voice "audio/Hamayumi/final/11.mp3"
-    hamayumi "Но не оформил ответ."
-
-    oliver "Тогда что остаётся?"
-    voice "audio/Hamayumi/final/12.mp3"
-    hamayumi "Режим по умолчанию."
-
-    scene black
-    with fade
-
-    "Концовка: Default."
-
-    return
