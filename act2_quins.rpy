@@ -13,7 +13,11 @@ label branch_quins:
     play music "audio/quins_theme.ogg" fadein 1.5
 
     show hamayumi at left
+    
+    hamayumi "Он опасен спокойствием."
+    voice "audio/Hamayumi/quins/1.mp3"
     hamayumi "Тут чинят головы."
+    voice "audio/Hamayumi/quins/2.mp3"
     hamayumi "Иногда — вместе с человеком."
     hide hamayumi
     show quins at center
@@ -42,6 +46,7 @@ label branch_quins:
             $ quins_score += 1
             quins "Хорошо. Спасибо, что сказал прямо."
             quins "Я буду говорить ясно и аккуратно, чтобы тебе не стало тяжелее."
+            voice "audio/Hamayumi/quins/3.mp3"
             hamayumi "Ей можно верить."
 
         "Ты знаешь что это за место?":
@@ -85,6 +90,7 @@ label branch_quins:
             oliver "Я реально ZXC ПСИхо кид"
             oliver "Эх..."
             oliver "Вот бы в дотанчик с ловпозам и картоххай"
+            
             quins "Научишься. По шагу."
 
         "Тёплое воспоминание":
@@ -116,7 +122,7 @@ label branch_quins:
     zombi "Тили..Тили..."
     zombi "..."
     zombi "КАИН"
-
+    voice "audio/Hamayumi/quins/4.mp3"
     hamayumi "Не отвечай."
 
     quins "Смотри на меня."
@@ -134,6 +140,7 @@ label branch_quins:
 
         "Убежать что есть мочи":
             zombi "Установка началась."
+            voice "audio/Hamayumi/quins/5.mp3"
             hamayumi "..."
             quins "Эй. Слушай меня."
             quins "Не ругай себя. Мы будем исправлять."
@@ -192,6 +199,7 @@ label branch_quins:
         quins "Я запомнила твою траекторию."
         quins "Ты выбирал не идеальные слова — но честные шаги."
         quins "В ядре у тебя будет вариант без упрощения."
+        voice "audio/Hamayumi/quins/6.mp3"
         hamayumi "Это открывает выход."
         oliver "А ну понятно "
         oliver "Теперь я всё понял"

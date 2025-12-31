@@ -11,9 +11,11 @@ label act3_entry:
 
     oliver "Город дрожит."
     oliver "Как будто ему больно."
-
+    voice "audio/Hamayumi/act_3/1.mp3"
     hamayumi "Схождение."
+    voice "audio/Hamayumi/act_3/2.mp3"
     hamayumi "Не людей."
+    voice "audio/Hamayumi/act_3/3.mp3"
     hamayumi "Аргументов."
 
     scene bg cyberspace_city
@@ -24,9 +26,11 @@ label act3_entry:
     "Ритм — в давление."
 
     oliver "Это… бой?"
-
+    voice "audio/Hamayumi/act_3/4.mp3"
     hamayumi "Да."
+    voice "audio/Hamayumi/act_3/5.mp3"
     hamayumi "Но без ударов."
+    voice "audio/Hamayumi/act_3/6.mp3"
     hamayumi "Только попытки назвать тебя вместо тебя."
 
     # --- Микро-файт: аргументы появляются быстро и перебивают друг друга ---
@@ -63,8 +67,11 @@ label act3_entry:
         with dissolve
 
     if not (quins_done or nighstess_done or sand_done or hospital_done):
+        voice "audio/Hamayumi/act_3/7.mp3"
         hamayumi "Пусто."
+        voice "audio/Hamayumi/act_3/8.mp3"
         hamayumi "Значит, бой будет проще."
+        voice "audio/Hamayumi/act_3/9.mp3"
         hamayumi "Тебя будут брать не смыслом — усталостью."
 
     # --- Перелом: город пытается выбрать за героя ---
@@ -77,13 +84,17 @@ label act3_entry:
     "Стрелки — одним направлением."
 
     oliver "Меня ведут."
-
+    voice "audio/Hamayumi/act_3/10.mp3"
     hamayumi "Потому что ядро не ждёт."
+    voice "audio/Hamayumi/act_3/11.mp3"
     hamayumi "Оно собирает то, что ты оставил."
 
     # --- Финальный 'файт'-вывод в 2–3 реплики ---
+    voice "audio/Hamayumi/act_3/12.mp3"
     hamayumi "Смотри:"
+    voice "audio/Hamayumi/act_3/13.mp3"
     hamayumi "Выход, принятие, пауза, нормализация."
+    voice "audio/Hamayumi/act_3/14.mp3"
     hamayumi "Это не персонажи. Это кнопки на тебе."
 
     stop music fadeout 1.5
@@ -94,9 +105,11 @@ label act3_entry:
     "Впереди — CORE NODE."
     "Дверь без ручки."
     "Только интерфейс."
-
+    voice "audio/Hamayumi/act_3/15.mp3"
     hamayumi "Идём."
+    voice "audio/Hamayumi/act_3/16.mp3"
     hamayumi "Конец — это не сцена."
+    voice "audio/Hamayumi/act_3/17.mp3"
     hamayumi "Это выбранное состояние."
 
     jump core_entry

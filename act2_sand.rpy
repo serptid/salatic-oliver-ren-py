@@ -20,9 +20,14 @@ label branch_sand:
 
     play music "audio/sand_theme.ogg" fadein 1.5
     show hamayumi at left
+
+    voice "audio/Hamayumi/sand/1.mp3"
     hamayumi "Край."
+    voice "audio/Hamayumi/sand/2.mp3"
     hamayumi "Тут система перестаёт объяснять."
+    voice "audio/Hamayumi/sand/3.mp3"
     hamayumi "Как будто ты дошёл до границы биома — дальше только песок."
+
     oliver "О я обожаю песочек"
 
     show sand at center
@@ -35,7 +40,9 @@ label branch_sand:
     oliver "Мой любимый сервер СП"
     oliver "Я выкопаю весь песок!!!"
 
+    voice "audio/Hamayumi/sand/4.mp3"
     hamayumi "Он говорит так, будто бесконечное копание — это религия."
+    voice "audio/Hamayumi/sand/5.mp3"
     hamayumi "И будто в этой религии нет греха."
 
     menu:
@@ -43,12 +50,16 @@ label branch_sand:
 
         "Это похоже на пустоту.":
             # (реплики sand убраны — балл не начисляется)
+            voice "audio/Hamayumi/sand/6.mp3"
             hamayumi "И отсутствие направления."
+            voice "audio/Hamayumi/sand/7.mp3"
             hamayumi "Когда ты копаешь песок, ты не приближаешься ни к чему — и в этом кайф."
 
         "Это пустота.":
             # (реплики sand убраны — балл не начисляется)
+            voice "audio/Hamayumi/sand/8.mp3"
             hamayumi "Честность без будущего."
+            voice "audio/Hamayumi/sand/9.mp3"
             hamayumi "Как инвентарь, в котором нет плана — только стаки песка."
 
         "Это архив.":
@@ -59,6 +70,7 @@ label branch_sand:
             sand "Но 'однажды' не наступает."
             sand "И тогда ты складываешь дальше — уже не ради пользы."
             sand "Ради ощущения, что ты всё ещё контролируешь хоть что-то."
+            voice "audio/Hamayumi/sand/10.mp3"
             hamayumi "Здесь лежат решения, которые так и не стали выбором."
 
     # -------------------------
@@ -77,8 +89,11 @@ label branch_sand:
     "Голос" "Я отложил навсегда."
     "Голос" "Я сказал себе: 'ещё один стак песка — и потом решу'."
 
+    voice "audio/Hamayumi/sand/11.mp3"
     hamayumi "Слышишь эти голоса?"
+    voice "audio/Hamayumi/sand/12.mp3"
     hamayumi "Это игроки, которые пытались заменить выбор процессом."
+    voice "audio/Hamayumi/sand/13.mp3"
     hamayumi "И процесс победил."
 
     menu:
@@ -92,16 +107,21 @@ label branch_sand:
             sand "И всё равно исчезнуть в этом."
             sand "Песок не делает шагов за тебя."
             sand "Он просто делает шаги ненужными."
+            voice "audio/Hamayumi/sand/14.mp3"
             hamayumi "Песок не держит цепями."
+            voice "audio/Hamayumi/sand/15.mp3"
             hamayumi "Он держит привычкой: ещё один блок — и станет легче."
 
         "Я не хочу так закончить.":
             # (реплики sand убраны — балл не начисляется)
+            voice "audio/Hamayumi/sand/16.mp3"
             hamayumi "Значит, пауза не победила."
+            voice "audio/Hamayumi/sand/17.mp3"
             hamayumi "Значит, тебе всё ещё нужен смысл — хоть какой-то."
 
         "Это ловушка.":
             # (реплики sand убраны — балл не начисляется)
+            voice "audio/Hamayumi/sand/18.mp3"
             hamayumi "И именно поэтому его легко перепутать с безопасностью."
 
     # -------------------------
@@ -115,9 +135,13 @@ label branch_sand:
     sand "Они не ведут к дому."
     sand "Они ведут к повторению."
 
+    voice "audio/Hamayumi/sand/19.mp3"
     hamayumi "В Minecraft есть момент, когда ты копаешь не ради стекла."
+    voice "audio/Hamayumi/sand/20.mp3"
     hamayumi "А ради звука лопаты."
+    voice "audio/Hamayumi/sand/21.mp3"
     hamayumi "Вот это место."
+
     oliver "Я выкопаю весь песок!!!"
 
     sand "Тебе дадут выбор: взять зерно."
@@ -132,18 +156,16 @@ label branch_sand:
             sand "О цене тишины."
             sand "Зерно как первый блок в стаках: незаметный, но запускающий цепочку."
             sand "Ты берёшь его — и уже не можешь делать вид, что ничего не выбирал."
+            voice "audio/Hamayumi/sand/22.mp3"
             hamayumi "О том, что пауза тоже платная."
+            voice "audio/Hamayumi/sand/23.mp3"
             hamayumi "Платишь временем, вниманием и тем, что перестаёшь строить."
-
-        "Остаться здесь, ничего не решая.":
-            # (реплики sand убраны — балл не начисляется)
-            hamayumi "И ты перестанешь замечать себя."
-            hamayumi "Сначала ты перестанешь считать дни."
-            hamayumi "Потом перестанешь помнить, зачем пришёл."
 
         "Вернуться и выбрать сторону.":
             # (реплики sand убраны — балл не начисляется)
+            voice "audio/Hamayumi/sand/24.mp3"
             hamayumi "И снова станешь заметным."
+            voice "audio/Hamayumi/sand/25.mp3"
             hamayumi "Потому что выбор — это всегда шум."
 
     # -------------------------
@@ -156,8 +178,11 @@ label branch_sand:
     sand "Пока ты не просишь у мира ответа."
     sand "Пока ты просто копаешь."
 
+    voice "audio/Hamayumi/sand/26.mp3"
     hamayumi "Тишина — это не награда."
+    voice "audio/Hamayumi/sand/27.mp3"
     hamayumi "Это режим."
+    voice "audio/Hamayumi/sand/28.mp3"
     hamayumi "И режимы затягивают сильнее, чем запреты."
 
     # -------------------------
@@ -171,7 +196,9 @@ label branch_sand:
         sand "Как мир на мирной сложности: без победы, без поражения."
         sand "Просто бесконечный песок, который всегда можно копать."
         oliver "Ура я всегда хотела быть только с табой только в таком состоянии"
+        voice "audio/Hamayumi/sand/29.mp3"
         hamayumi "Мир из песка. Без победы. Без поражения."
+        voice "audio/Hamayumi/sand/30.mp3"
         hamayumi "И самое опасное: тебе там будет спокойно."
     else:
         $ sand_done = False
@@ -179,7 +206,9 @@ label branch_sand:
         sand "Значит, пауза не твоя."
         oliver "Нет паузы бз кд ебашим"
         sand "Значит, ты копаешь — но всё ещё ждёшь, что копание ответит."
+        voice "audio/Hamayumi/sand/31.mp3"
         hamayumi "Тишина не приняла тебя."
+        voice "audio/Hamayumi/sand/32.mp3"
         hamayumi "Потому что ты всё ещё хочешь выйти из цикла, а не жить в нём."
 
     # Поворот: Sand раскрывает настоящее имя только в конце
@@ -195,7 +224,6 @@ label branch_sand:
     oliver "понятен, и я здесь ищу только одного - покоя, умиротворения и"
     oliver "вот этой гармонии, от слияния с бесконечно вечным, от созерцания"
     oliver "великого фрактального подобия и от вот этого замечательного всеединства существа"
-
 
     hide sand
     with dissolve

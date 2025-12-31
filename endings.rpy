@@ -76,7 +76,7 @@ label end_nighstess:
 
     nighstess "Добро пожаловать не в тюрьму."
     nighstess "А в устойчивую форму."
-
+    voice "audio/Hamayumi/final/1.mp3"
     hamayumi "Ты понимаешь цену?"
 
     oliver "Понимаю."
@@ -109,7 +109,7 @@ label end_sand:
 
     sand "Ты не выиграл."
     sand "И не проиграл."
-
+    voice "audio/Hamayumi/final/2.mp3"
     hamayumi "Тогда просто… будь."
 
     scene bg cyberspace_core_ui
@@ -171,13 +171,14 @@ label end_virus:
 
     "USER MODE: DISABLED"
     "PROCESS MODE: ENABLED"
-
+    voice "audio/Hamayumi/final/3.mp3"
     hamayumi "Ты больше не выбираешь."
 
     scene cyberspace_void
     with dissolve
-
+    voice "audio/Hamayumi/final/4.mp3"
     hamayumi "Это был не финал."
+    voice "audio/Hamayumi/final/5.mp3"
     hamayumi "Это был выход из интерфейса."
 
     scene glitch_layer
@@ -199,8 +200,9 @@ label end_virus:
 
     "Окно сворачивается."
     "Звук остаётся."
-
+    voice "audio/Hamayumi/final/6.mp3"
     hamayumi "Это не саундтрек."
+    voice "audio/Hamayumi/final/7.mp3"
     hamayumi "Это системный шум."
 
     scene desktop_fake
@@ -211,8 +213,9 @@ label end_virus:
     "Издатель: неизвестен"
 
     zombi "Интеграция завершена."
-
+    voice "audio/Hamayumi/final/8.mp3"
     hamayumi "Ты просил, чтобы за тебя решили."
+    voice "audio/Hamayumi/final/9.mp3"
     hamayumi "Теперь ты — среда."
 
     scene black
@@ -235,12 +238,13 @@ label end_default:
 
     scene cyberspace_void
     with fade
-
+    voice "audio/Hamayumi/final/10.mp3"
     hamayumi "Ты дошёл до конца."
+    voice "audio/Hamayumi/final/11.mp3"
     hamayumi "Но не оформил ответ."
 
     oliver "Тогда что остаётся?"
-
+    voice "audio/Hamayumi/final/12.mp3"
     hamayumi "Режим по умолчанию."
 
     scene black

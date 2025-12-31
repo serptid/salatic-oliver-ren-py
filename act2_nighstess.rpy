@@ -24,20 +24,28 @@ label branch_nighstess:
     oliver "Найтес!"
     oliver "Братанчик"
     oliver "Зайка)"
+
     show hamayumi at left
     show nighstess at right
+
+    voice "audio/Hamayumi/nightass/1.mp3"
     hamayumi "Он опасен спокойствием."
+    voice "audio/Hamayumi/nightass/2.mp3"
     hamayumi "С ним не спорят — к нему привыкают."
+
     oliver "Он чё"
     oliver "Афтаритет тут какойто"
     oliver "Да он реальный Филон"
 
     menu:
         "Тезис"
+
         "Это иллюзия.":
             nighstess "И всё же ты здесь."
             oliver "Ну а где?"
+            voice "audio/Hamayumi/nightass/3.mp3"
             hamayumi "Иллюзии тоже требуют участия."
+            voice "audio/Hamayumi/nightass/4.mp3"
             hamayumi "Ты платишь вниманием."
 
         "Тут не хочеться существовать.. это не реальность.":
@@ -45,6 +53,7 @@ label branch_nighstess:
             nighstess "Я хочу, чтобы ты не притворялся."
             nighstess "Остаться — это слово."
             nighstess "Принять — это действие."
+
         "А если реальный мир хуже?":
             hide hamayumi
             $ nighstess_score += 1
@@ -53,24 +62,29 @@ label branch_nighstess:
             oliver "Вот бы тут остаться с тобой..."
             oliver "Навсегда!"
 
-
     # -------------------------
     # Экран 2 — пауза/разметка понятий
     # -------------------------
     scene bg cyberspace_pause
     with dissolve
+
     show nighstess at center
     nighstess "В реальности ты диагноз."
     nighstess "Здесь ты процесс, который может думать."
+
     oliver "Да Задалбал меня "
     oliver "Кто такое КИБЕРСПЕЙС"
     oliver "Я не понимаю"
     oliver "Без понятия"
     oliver "типа"
+
     hide nighstess
     show hamayumi at left
     show nighstess at right
+
+    voice "audio/Hamayumi/nightass/5.mp3"
     hamayumi "Он подменяет ярлыки функцией."
+    voice "audio/Hamayumi/nightass/6.mp3"
     hamayumi "Так легче согласиться."
 
     menu:
@@ -87,7 +101,9 @@ label branch_nighstess:
         "Ты оправдываешь бегство.":
             oliver "Нет во всем этом смысла"
             nighstess "Я называю вещи своими именами."
+            voice "audio/Hamayumi/nightass/7.mp3"
             hamayumi "Имя — это ещё не смысл."
+            voice "audio/Hamayumi/nightass/8.mp3"
             hamayumi "Смысл — в том, что ты сделаешь дальше."
 
         "Я ищу Quins.":
@@ -97,29 +113,34 @@ label branch_nighstess:
             nighstess "Но простое обещание — всегда ловушка."
 
     # -------------------------
-    # Экран 7 — возвращение на крышу: решение (3-й балл)
+    # Экран 7 — возвращение на крышу
     # -------------------------
     scene bg cyberspace_street
     with dissolve
+
     show nighstess at right
     nighstess "Я не переписываю тебя."
     nighstess "Я предлагаю жить здесь осознанно."
+
     oliver "Да я уже понила что ты сумашедший"
     oliver "Получаетсья будем вместе тусить"
-    
 
     menu:
         "Решение"
 
         "Я не готов решать.":
             nighstess "Тогда решат за тебя."
+            voice "audio/Hamayumi/nightass/9.mp3"
             hamayumi "И ты назовёшь это спокойствием."
+            voice "audio/Hamayumi/nightass/10.mp3"
             hamayumi "Потому что так проще выдержать стыд."
 
         "Отдай мне автопилот.":
             nighstess "Можно."
             nighstess "Но автопилот любит, когда ты исчезаешь из решения."
+            voice "audio/Hamayumi/nightass/11.mp3"
             hamayumi "И тогда остаётся только маршрут."
+            voice "audio/Hamayumi/nightass/12.mp3"
             hamayumi "Без твоего имени."
 
         "Я хочу остаться и принять это.":
@@ -140,18 +161,25 @@ label branch_nighstess:
         nighstess "В ядре тебе дадут режим."
         nighstess "Ты не получишь счастье."
         nighstess "Ты получишь честность без боли-шума."
+
         oliver "Я всё ещё не понимаю"
         oliver "Мы типо соседи по полате"
         oliver "Что с вами всеми сделал киберспек"
+
+        voice "audio/Hamayumi/nightass/13.mp3"
         hamayumi "Это откроет её концовку."
+        voice "audio/Hamayumi/nightass/14.mp3"
         hamayumi "Но помни: режим — это инструмент."
+        voice "audio/Hamayumi/nightass/15.mp3"
         hamayumi "Инструменты любят становиться привычкой."
     else:
         $ nighstess_done = False
         nighstess "Ты ещё не выбрал."
         nighstess "Ты коллекционируешь слова."
         oliver "Прости найтес но ты мне просто друг"
+        voice "audio/Hamayumi/nightass/16.mp3"
         hamayumi "Слова без решения — просто шум."
+        voice "audio/Hamayumi/nightass/17.mp3"
         hamayumi "А шум — идеальная маскировка страха."
 
     hide nighstess

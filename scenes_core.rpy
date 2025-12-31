@@ -15,8 +15,12 @@ label core_select:
 
     play music "audio/core_node.ogg" fadein 1.5
     show hamayumi at center
+    hamayumi "Край."
+    voice "audio/Hamayumi/scen_core/1.mp3"
     hamayumi "Дальше — ядро."
+    voice "audio/Hamayumi/scen_core/2.mp3"
     hamayumi "Здесь не торгуются."
+    voice "audio/Hamayumi/scen_core/3.mp3"
     hamayumi "Здесь фиксируют."
 
     scene bg cyberspace_core
@@ -38,8 +42,14 @@ label core_select:
     hide artemka
     show hamayumi at right
     show artemka at left
+    
+    voice "audio/Hamayumi/scen_core/4.mp3"
     hamayumi "Он даст интерфейс."
+    
+    voice "audio/Hamayumi/scen_core/5.mp3"
     hamayumi "Но доступные варианты зависят от того, что ты оформил."
+
+    voice "audio/Hamayumi/scen_core/6.mp3"
     hamayumi "В ядре нельзя 'попробовать'."
 
     scene bg cyberspace_core_ui
@@ -69,7 +79,11 @@ label core_select:
 
         "Стабилизация: выход из киберспейса" if quins_done:
             artemka "Параметры: разрыв связи. Возврат в физический контур."
+            
+            voice "audio/Hamayumi/scen_core/7.mp3"
             hamayumi "Цена: потеря удобной формы."
+            
+            voice "audio/Hamayumi/scen_core/8.mp3"
             hamayumi "И риск, что реальность окажется без сюжета."
             menu:
                 "CONFIRM: EXIT?"
@@ -84,7 +98,11 @@ label core_select:
 
         "Стабилизация: непрерывное существование" if nighstess_done:
             artemka "Параметры: закрепление в среде. Режим ядра."
+            
+            voice "audio/Hamayumi/scen_core/9.mp3"
             hamayumi "Цена: ты перестанешь называть это временным."
+            
+            voice "audio/Hamayumi/scen_core/10.mp3"
             hamayumi "Привычка станет законом."
             menu:
                 "CONFIRM: CONTINUOUS?"
@@ -99,7 +117,11 @@ label core_select:
 
         "Стабилизация: пауза без выбора" if sand_done:
             artemka "Параметры: нейтральный контур. Снижение требований."
+            
+            voice "audio/Hamayumi/scen_core/11.mp3"
             hamayumi "Цена: будущее перестанет стучать."
+        
+            voice "audio/Hamayumi/scen_core/12.mp3"
             hamayumi "И ты можешь полюбить это слишком сильно."
             menu:
                 "CONFIRM: PAUSE?"
@@ -113,7 +135,9 @@ label core_select:
                     jump core_select
 
         "Стабилизация: нормализация реальности" if hospital_done:
+            
             artemka "Параметры: приоритет физического объяснения. Снижение символов."
+            voice "audio/Hamayumi/scen_core/13.mp3"
             hamayumi "Цена: часть смысла станет 'лишним'."
             hamayumi "И это будет ощущаться как облегчение."
             menu:
