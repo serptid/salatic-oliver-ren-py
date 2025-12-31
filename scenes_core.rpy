@@ -14,13 +14,20 @@ label core_select:
     with fade
 
     play music "audio/music/mrartem.mp3" fadein 2.0 loop volume 0.008
+
     show hamayumi at center
     hamayumi "Край."
     voice "audio/Hamayumi/scen_core/1.mp3"
+    hide hamayumi
+    show hamayumi_up at center
     hamayumi "Дальше - ядро."
     voice "audio/Hamayumi/scen_core/2.mp3"
+    hide hamayumi_up
+    show hamayumi_T at center
     hamayumi "Здесь не торгуются."
     voice "audio/Hamayumi/scen_core/3.mp3"
+    hide hamayumi_T
+    show hamayumi_forw at center
     hamayumi "Здесь фиксируют."
 
     scene bg cyberspace_core
@@ -29,30 +36,37 @@ label core_select:
     show artemka at center
     with dissolve
 
-    artemka "Переменная обнаружена."
-    artemka "Салатик Оливер."
-    artemka "Статус: нестабильный."
-
     oliver "Ты MR_artemka."
     oliver "Тёма"
     oliver "Что такое этот ваш киберспек"
     oliver "..."
 
+    artemka "Переменная обнаружена."
+    artemka "Салатик Оливер."
+    artemka "Статус: нестабильный."
+
     artemka "Я администратор."
     artemka "Я закрываю неопределённость."
     artemka "Не лечу."
     artemka "Компилирую."
+
     hide artemka
     show hamayumi at right
     show artemka at left
-    
+
     voice "audio/Hamayumi/scen_core/4.mp3"
+    hide hamayumi_forw
+    show hamayumi_break at right
     hamayumi "Он даст интерфейс."
-    
+
     voice "audio/Hamayumi/scen_core/5.mp3"
+    hide hamayumi_break
+    show hamayumi_cry at right
     hamayumi "Но доступные варианты зависят от того, что ты оформил."
 
     voice "audio/Hamayumi/scen_core/6.mp3"
+    hide hamayumi_cry
+    show hamayumi_you at right
     hamayumi "В ядре нельзя 'попробовать'."
 
     scene bg cyberspace_core_ui
@@ -85,11 +99,15 @@ label core_select:
 
         "Стабилизация: выход из киберспейса с любовью" if quins_done:
             artemka "Параметры: разрыв связи. Возврат в физический контур."
-            
+
             voice "audio/Hamayumi/scen_core/7.mp3"
+            hide hamayumi_you
+            show hamayumi at right
             hamayumi "Цена: потеря удобной формы."
-            
+
             voice "audio/Hamayumi/scen_core/8.mp3"
+            hide hamayumi
+            show hamayumi_up at right
             hamayumi "И риск, что реальность окажется без сюжета."
             menu:
                 "CONFIRM: EXIT?"
@@ -104,11 +122,15 @@ label core_select:
 
         "Стабилизация: непрерывное существование с другом" if nighstess_done:
             artemka "Параметры: закрепление в среде. Режим ядра."
-            
+
             voice "audio/Hamayumi/scen_core/9.mp3"
+            hide hamayumi_up
+            show hamayumi_T at right
             hamayumi "Цена: ты перестанешь называть это временным."
-            
+
             voice "audio/Hamayumi/scen_core/10.mp3"
+            hide hamayumi_T
+            show hamayumi_forw at right
             hamayumi "Привычка станет законом."
             menu:
                 "CONFIRM: CONTINUOUS?"
@@ -123,11 +145,15 @@ label core_select:
 
         "Стабилизация: пауза без выбора с мечтой" if sand_done:
             artemka "Параметры: нейтральный контур. Снижение требований."
-            
+
             voice "audio/Hamayumi/scen_core/11.mp3"
+            hide hamayumi_forw
+            show hamayumi_break at right
             hamayumi "Цена: будущее перестанет стучать."
-        
+
             voice "audio/Hamayumi/scen_core/12.mp3"
+            hide hamayumi_break
+            show hamayumi_cry at right
             hamayumi "И ты можешь полюбить это слишком сильно."
             menu:
                 "CONFIRM: PAUSE?"
@@ -141,9 +167,11 @@ label core_select:
                     jump core_select
 
         "Стабилизация: нормализация реальности с самим собой" if hospital_done:
-            
+
             artemka "Параметры: приоритет физического объяснения. Снижение символов."
             voice "audio/Hamayumi/scen_core/13.mp3"
+            hide hamayumi_cry
+            show hamayumi_you at right
             hamayumi "Цена: часть смысла станет 'лишним'."
             hamayumi "И это будет ощущаться как облегчение."
             menu:

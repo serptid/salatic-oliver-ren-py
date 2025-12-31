@@ -31,6 +31,8 @@ label branch_nighstess:
     voice "audio/Hamayumi/nightass/1.mp3"
     hamayumi "Он опасен спокойствием."
     voice "audio/Hamayumi/nightass/2.mp3"
+    hide hamayumi
+    show hamayumi_up at left
     hamayumi "С ним не спорят - к нему привыкают."
 
     oliver "Он чё"
@@ -44,18 +46,22 @@ label branch_nighstess:
             nighstess "И всё же ты здесь."
             oliver "Ну а где?"
             voice "audio/Hamayumi/nightass/3.mp3"
+            hide hamayumi_up
+            show hamayumi_T at left
             hamayumi "Иллюзии тоже требуют участия."
             voice "audio/Hamayumi/nightass/4.mp3"
+            hide hamayumi_T
+            show hamayumi_forw at left
             hamayumi "Ты платишь вниманием."
 
         "Тут не хочеться существовать.. это не реальность.":
-            hide hamayumi
+            hide hamayumi_forw
             nighstess "Я хочу, чтобы ты не притворялся."
             nighstess "Остаться - это слово."
             nighstess "Принять - это действие."
 
         "А если реальный мир хуже?":
-            hide hamayumi
+            hide hamayumi_forw
             $ nighstess_score += 1
             nighstess "Вот честный вопрос."
             nighstess "Не о свободе. О сравнении боли."
@@ -85,6 +91,8 @@ label branch_nighstess:
     voice "audio/Hamayumi/nightass/5.mp3"
     hamayumi "Он подменяет ярлыки функцией."
     voice "audio/Hamayumi/nightass/6.mp3"
+    hide hamayumi
+    show hamayumi_break at left
     hamayumi "Так легче согласиться."
 
     menu:
@@ -102,8 +110,12 @@ label branch_nighstess:
             oliver "Нет во всем этом смысла"
             nighstess "Я называю вещи своими именами."
             voice "audio/Hamayumi/nightass/7.mp3"
+            hide hamayumi_break
+            show hamayumi_cry at left
             hamayumi "Имя - это ещё не смысл."
             voice "audio/Hamayumi/nightass/8.mp3"
+            hide hamayumi_cry
+            show hamayumi_you at left
             hamayumi "Смысл - в том, что ты сделаешь дальше."
 
         "Я ищу Quins.":
@@ -131,16 +143,24 @@ label branch_nighstess:
         "Я не готов решать.":
             nighstess "Тогда решат за тебя."
             voice "audio/Hamayumi/nightass/9.mp3"
+            hide hamayumi_you
+            show hamayumi at left
             hamayumi "Он всегда добовляет эту строчку."
             voice "audio/Hamayumi/nightass/10.mp3"
+            hide hamayumi
+            show hamayumi_up at left
             hamayumi "Как подпись под контрактом."
 
         "Отдай мне автопилот.":
             nighstess "Можно."
             nighstess "Но автопилот любит, когда ты исчезаешь из решения."
             voice "audio/Hamayumi/nightass/11.mp3"
+            hide hamayumi_up
+            show hamayumi_T at left
             hamayumi "Меняют форму… и называют это зрелостью."
             voice "audio/Hamayumi/nightass/12.mp3"
+            hide hamayumi_T
+            show hamayumi_forw at left
             hamayumi "И данные обычно используют против тебя."
 
         "Я хочу остаться и принять это.":
@@ -167,10 +187,16 @@ label branch_nighstess:
         oliver "Что с вами всеми сделал киберспек"
 
         voice "audio/Hamayumi/nightass/13.mp3"
+        hide hamayumi_forw
+        show hamayumi_break at left
         hamayumi "Он поднимает ставку."
         voice "audio/Hamayumi/nightass/14.mp3"
+        hide hamayumi_break
+        show hamayumi_cry at left
         hamayumi "Не угрозой. Контекстом."
         voice "audio/Hamayumi/nightass/15.mp3"
+        hide hamayumi_cry
+        show hamayumi_you at left
         hamayumi "И он сейчас попробует купить у тебя это право."
     else:
         $ nighstess_done = False
@@ -178,8 +204,12 @@ label branch_nighstess:
         nighstess "Ты коллекционируешь слова."
         oliver "Прости найтес но ты мне просто друг"
         voice "audio/Hamayumi/nightass/33.mp3"
+        hide hamayumi_forw
+        show hamayumi_T at left
         hamayumi "Слова без решения — просто шум.."
         voice "audio/Hamayumi/nightass/34.mp3"
+        hide hamayumi_T
+        show hamayumi_up at left
         hamayumi "А шум — идеальная маскировка страха."
 
     hide nighstess

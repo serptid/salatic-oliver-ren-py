@@ -13,7 +13,7 @@ label branch_quins:
     play music "audio/music/quins.mp3" fadein 2.0 loop volume 0.008
 
     show hamayumi at left
-    
+
     hamayumi "Он опасен спокойствием."
     voice "audio/Hamayumi/quins/1.mp3"
     hamayumi "Тут чинят головы."
@@ -47,7 +47,9 @@ label branch_quins:
             quins "Хорошо. Спасибо, что сказал прямо."
             quins "Я буду говорить ясно и аккуратно, чтобы тебе не стало тяжелее."
             voice "audio/Hamayumi/quins/3.mp3"
+            show hamayumi at left
             hamayumi "Ей можно верить."
+            hide hamayumi
 
         "Ты знаешь что это за место?":
             quins "Сейчас это не самое важное."
@@ -61,7 +63,7 @@ label branch_quins:
             quins "Но если сила - чтобы перестать чувствовать, ты потеряешь себя."
             oliver "Отстань!"
             quins "Знаешь. Просто больно признать."
-    
+
     scene bg cyberspace_tunnel
     with dissolve
     show quins at left
@@ -90,7 +92,7 @@ label branch_quins:
             oliver "Я реально ZXC ПСИхо кид"
             oliver "Эх..."
             oliver "Вот бы в дотанчик с ловпозам и картоххай"
-            
+
             quins "Научишься. По шагу."
 
         "Тёплое воспоминание":
@@ -112,7 +114,7 @@ label branch_quins:
     with dissolve
 
     show zombi at right
-    
+
     show quins at left
     with dissolve
 
@@ -123,7 +125,9 @@ label branch_quins:
     zombi "..."
     zombi "КАИН"
     voice "audio/Hamayumi/quins/4.mp3"
+    show hamayumi at left
     hamayumi "Не отвечай."
+    hide hamayumi
 
     quins "Смотри на меня."
     quins "Держись за мой голос. Мы не обязаны это слушать."
@@ -141,7 +145,9 @@ label branch_quins:
         "Убежать что есть мочи":
             zombi "Установка началась."
             voice "audio/Hamayumi/quins/5.mp3"
+            show hamayumi at left
             hamayumi "..."
+            hide hamayumi
             quins "Эй. Слушай меня."
             quins "Не ругай себя. Мы будем исправлять."
             oliver "БЕЖИИИИМ!"
@@ -149,6 +155,7 @@ label branch_quins:
             oliver "ЧТО Я СБЕРЕЗЫ СЛЕЗ"
             oliver "НЕ ЧЕЛОВЕК А ------"
             quins "Я знаю. Просто держись."
+
         "Нет времени на сомнения...":
             $ quins_score += 1
             quins "Вот так."
@@ -200,7 +207,9 @@ label branch_quins:
         quins "Ты выбирал не идеальные слова - но честные шаги."
         quins "В ядре у тебя будет вариант без упрощения."
         voice "audio/Hamayumi/quins/6.mp3"
+        show hamayumi at center
         hamayumi "Это открывает выход."
+        hide hamayumi
         oliver "А ну понятно "
         oliver "Теперь я всё понял"
         oliver "Жизнь она как колодец..."

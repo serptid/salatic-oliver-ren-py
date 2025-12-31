@@ -14,10 +14,15 @@ label act3_entry:
     oliver "Я взорву тут всё"
 
     voice "audio/Hamayumi/act_3/1.mp3"
+    show hamayumi at left
     hamayumi "Схождение."
     voice "audio/Hamayumi/act_3/2.mp3"
+    hide hamayumi
+    show hamayumi_up at left
     hamayumi "Не людей."
     voice "audio/Hamayumi/act_3/3.mp3"
+    hide hamayumi_up
+    show hamayumi_T at left
     hamayumi "Аргументов."
 
     scene bg cyberspace_city
@@ -30,10 +35,16 @@ label act3_entry:
     oliver "Это... бой?"
     oliver "О мой бой"
     voice "audio/Hamayumi/act_3/4.mp3"
+    hide hamayumi_T
+    show hamayumi_forw at left
     hamayumi "Да."
     voice "audio/Hamayumi/act_3/5.mp3"
+    hide hamayumi_forw
+    show hamayumi_break at left
     hamayumi "Но без ударов."
     voice "audio/Hamayumi/act_3/6.mp3"
+    hide hamayumi_break
+    show hamayumi_cry at left
     hamayumi "Только попытки назвать тебя вместо тебя."
 
     # --- Микро-файт: аргументы появляются быстро и перебивают друг друга ---
@@ -71,10 +82,16 @@ label act3_entry:
 
     if not (quins_done or nighstess_done or sand_done or hospital_done):
         voice "audio/Hamayumi/act_3/7.mp3"
+        hide hamayumi_cry
+        show hamayumi_you at left
         hamayumi "Пусто."
         voice "audio/Hamayumi/act_3/8.mp3"
+        hide hamayumi_you
+        show hamayumi at left
         hamayumi "Значит, бой будет проще."
         voice "audio/Hamayumi/act_3/9.mp3"
+        hide hamayumi
+        show hamayumi_up at left
         hamayumi "Тебя будут брать не смыслом - усталостью."
 
     # --- Перелом: город пытается выбрать за героя ---
@@ -88,16 +105,26 @@ label act3_entry:
 
     oliver "Матвей. Веди.!.!"
     voice "audio/Hamayumi/act_3/10.mp3"
+    hide hamayumi_up
+    show hamayumi_T at left
     hamayumi "Потому что ядро не ждёт."
     voice "audio/Hamayumi/act_3/11.mp3"
+    hide hamayumi_T
+    show hamayumi_forw at left
     hamayumi "Оно собирает то, что ты оставил."
 
     # --- Финальный 'файт'-вывод в 2–3 реплики ---
     voice "audio/Hamayumi/act_3/12.mp3"
+    hide hamayumi_forw
+    show hamayumi_break at left
     hamayumi "Смотри:"
     voice "audio/Hamayumi/act_3/13.mp3"
+    hide hamayumi_break
+    show hamayumi_cry at left
     hamayumi "Выход, принятие, пауза, нормализация."
     voice "audio/Hamayumi/act_3/14.mp3"
+    hide hamayumi_cry
+    show hamayumi_you at left
     hamayumi "Это не персонажи. Это кнопки на тебе."
     hamayumi ".!."
 
@@ -112,10 +139,17 @@ label act3_entry:
     ".!."
     ":0"
     voice "audio/Hamayumi/act_3/15.mp3"
+    hide hamayumi_you
+    show hamayumi at left
     hamayumi "Идём."
     voice "audio/Hamayumi/act_3/16.mp3"
+    hide hamayumi
+    show hamayumi_up at left
     hamayumi "Конец - это не сцена."
     voice "audio/Hamayumi/act_3/17.mp3"
+    hide hamayumi_up
+    show hamayumi_T at left
     hamayumi "Это выбранное состояние."
 
+    hide hamayumi_T
     jump core_entry
