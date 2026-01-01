@@ -51,16 +51,14 @@ label core_select:
     artemka "Компилирую."
 
     hide artemka
-    show hamayumi at right
     show artemka at left
 
+    show hamayumi at right
     voice "audio/Hamayumi/scen_core/4.mp3"
-    hide hamayumi_forw
-    show hamayumi_break at right
     hamayumi "Он даст интерфейс."
 
     voice "audio/Hamayumi/scen_core/5.mp3"
-    hide hamayumi_break
+    hide hamayumi
     show hamayumi_cry at right
     hamayumi "Но доступные варианты зависят от того, что ты оформил."
 

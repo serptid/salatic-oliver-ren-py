@@ -125,7 +125,7 @@ label branch_quins:
     zombi "..."
     zombi "КАИН"
     voice "audio/Hamayumi/quins/4.mp3"
-    show hamayumi at left
+    show hamayumi at center
     hamayumi "Не отвечай."
     hide hamayumi
 
@@ -207,7 +207,7 @@ label branch_quins:
         quins "Ты выбирал не идеальные слова - но честные шаги."
         quins "В ядре у тебя будет вариант без упрощения."
         voice "audio/Hamayumi/quins/6.mp3"
-        show hamayumi at center
+        show hamayumi at right
         hamayumi "Это открывает выход."
         hide hamayumi
         oliver "А ну понятно "

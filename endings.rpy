@@ -223,7 +223,7 @@ label end_nighstess:
     nighstess "И ни одно из этих состояний не навсегда."
     nighstess "Кроме выбранного."
 
-    scene bg cyberspace_club
+    scene bg cyberspace_city
     with dissolve
 
     "Свет."

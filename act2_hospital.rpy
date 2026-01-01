@@ -173,6 +173,7 @@ label branch_hospital:
             hamayumi "Он не пытается меня убить."
             voice "audio/Hamayumi/klinika/21.mp3"
             hide hamayumi_cry
+            hide hamayumi_T
             show hamayumi_you at left
             hamayumi "Он пытается поставить мне правила."
 

@@ -130,7 +130,7 @@ label act3_entry:
 
     stop music fadeout 1.5
 
-    scene bg cyberspace_core_gate
+    scene bg black
     with fade
 
     "Впереди - CORE NODE."

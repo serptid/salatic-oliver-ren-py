@@ -172,6 +172,8 @@ label branch_sand:
     oliver "Зачем мне весь этот песок?"
 
     voice "audio/Hamayumi/sand/19.mp3"
+
+    hide hamayumi_break
     hide hamayumi_forw
     show hamayumi_cry at left
     hamayumi "В Minecraft есть момент, когда ты копаешь не ради стекла."
@@ -231,9 +233,10 @@ label branch_sand:
     oliver "От голосов в голове..."
     voice "audio/Hamayumi/sand/26.mp3"
     hide hamayumi_you
+    hide hamayumi_forw
     show hamayumi at left
     hamayumi "Тишина - это не награда."
-    voice "audio/Hamayumi/sand/27.mp3"
+    voice "audio/Hamayumi7/sand/27.mp3"
     hide hamayumi
     show hamayumi_up at left
     hamayumi "Это режим."
