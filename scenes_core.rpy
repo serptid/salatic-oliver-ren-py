@@ -146,11 +146,11 @@ label core_select:
 
             voice "audio/Hamayumi/scen_core/11.mp3"
             hide hamayumi_forw
-            show hamayumi_break at right
+            show hamayumi_you at right
             hamayumi "Цена: будущее перестанет стучать."
 
             voice "audio/Hamayumi/scen_core/12.mp3"
-            hide hamayumi_break
+            hide hamayumi_you
             show hamayumi_cry at right
             hamayumi "И ты можешь полюбить это слишком сильно."
             menu:

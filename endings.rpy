@@ -61,7 +61,7 @@ label end_quins:
 
     "Ты обнимаешь Quins."
     "Не крепко - уверенно."
-    "Как говорят: «мы справились»."
+    "Как говорят: мы справились."
 
     quins "Ха..."
     quins "Знаешь, я давно не чувствовала это."
@@ -223,7 +223,7 @@ label end_nighstess:
     nighstess "И ни одно из этих состояний не навсегда."
     nighstess "Кроме выбранного."
 
-    scene bg cyberspace_city
+    scene bg cyberspace_good_street
     with dissolve
 
     "Свет."
@@ -303,28 +303,29 @@ label end_sand:
     sand "Только процесс."
 
     # --- Засыпание ядра песком (sand1..sand4) ---
-    scene bg sand1
+    scene bg cyberspasce_teleport
     with dissolve
     "Песок появляется сначала как ошибка текстуры."
     "Тонкой крошкой по краям интерфейса."
 
-    scene bg sand2
+    scene bg cyberspace_minecraft
     with dissolve
     "Он ложится ровнее."
     "Как слой, который никто не отменил."
 
-    scene bg sand3
+    scene bg sand1
     with dissolve
     "Ядро ещё видно."
     "Но уже будто под стеклом."
     "Под толщей мягкой пыли."
 
-    scene bg sand4
+    scene bg sand2
     with dissolve
     "Песок закрывает кнопки."
     "Закрывает надписи."
     "Закрывает сам вопрос."
-
+    scene bg sand3
+    with fade
     oliver "Ха."
     oliver "Это буквально мой любимый биом."
 
@@ -332,12 +333,13 @@ label end_sand:
     sand "Когда даже ядро перестаёт требовать ответ."
 
     # --- Плоский мир и копание (sand5..sand7) ---
-    scene bg sand5
+    scene bg sand4
     with fade
     "Мир выравнивается."
     "Рельеф исчезает."
     "Остаётся плоскость."
-
+    scene bg sand5
+    with fade
     "Песок."
     "Песок."
     "И ещё песок."
@@ -514,7 +516,7 @@ label end_hospital:
     oliver "Так, наверное, и должно быть."
     oliver "Нормально."
 
-    "Слово «нормально» не радует."
+    "Слово Нормально не радует."
     "И не пугает."
     "Оно просто закрывает тему."
 
@@ -631,7 +633,7 @@ label end_virus:
     zombi "ужас.."
     zombi "Матвей?"
     zombi "как мне теперь это развидеть 0_0"
-    zombi "ТУТ НЕ МОПСЫ... ТУТ! □□□□□"
+    zombi "ТУТ НЕ МОПСЫ... ТУТ! □1□00□0□11□"
 
     voice "audio/Hamayumi/final/8.mp3"
     hide hamayumi_break

@@ -11,7 +11,7 @@ label branch_nighstess:
     # -------------------------
     # Экран 1 - вход
     # -------------------------
-    scene bg cyberspace_street
+    scene bg cyberspace_good_street
     with fade
 
     play music "audio/music/nightass.mp3" fadein 2.0 loop volume 0.008
@@ -71,7 +71,7 @@ label branch_nighstess:
     # -------------------------
     # Экран 2 - пауза/разметка понятий
     # -------------------------
-    scene bg cyberspace_pause
+    scene bg cyberspace_pause_good
     with dissolve
 
     show nighstess at center
@@ -92,7 +92,7 @@ label branch_nighstess:
     hamayumi "Он подменяет ярлыки функцией."
     voice "audio/Hamayumi/nightass/6.mp3"
     hide hamayumi
-    show hamayumi_break at left
+    show hamayumi_you at left
     hamayumi "Так легче согласиться."
 
     menu:
@@ -110,7 +110,7 @@ label branch_nighstess:
             oliver "Нет во всем этом смысла"
             nighstess "Я называю вещи своими именами."
             voice "audio/Hamayumi/nightass/7.mp3"
-            hide hamayumi_break
+            hide hamayumi_you
             show hamayumi_cry at left
             hamayumi "Имя - это ещё не смысл."
             voice "audio/Hamayumi/nightass/8.mp3"
@@ -127,7 +127,7 @@ label branch_nighstess:
     # -------------------------
     # Экран 7 - возвращение на крышу
     # -------------------------
-    scene bg cyberspace_street
+    scene bg cyberspace_good_street
     with dissolve
 
     show nighstess at right
@@ -157,7 +157,7 @@ label branch_nighstess:
             voice "audio/Hamayumi/nightass/11.mp3"
             hide hamayumi_up
             show hamayumi_T at left
-            hamayumi "Меняют форму… и называют это зрелостью."
+            hamayumi "Меняют форму... и называют это зрелостью."
             voice "audio/Hamayumi/nightass/12.mp3"
             hide hamayumi_T
             show hamayumi_forw at left
@@ -188,10 +188,10 @@ label branch_nighstess:
 
         voice "audio/Hamayumi/nightass/13.mp3"
         hide hamayumi_forw
-        show hamayumi_break at left
+        show hamayumi_you at left
         hamayumi "Он поднимает ставку."
         voice "audio/Hamayumi/nightass/14.mp3"
-        hide hamayumi_break
+        hide hamayumi_you
         show hamayumi_cry at left
         hamayumi "Не угрозой. Контекстом."
         voice "audio/Hamayumi/nightass/15.mp3"
@@ -206,11 +206,11 @@ label branch_nighstess:
         voice "audio/Hamayumi/nightass/33.mp3"
         hide hamayumi_forw
         show hamayumi_T at left
-        hamayumi "Слова без решения — просто шум.."
+        hamayumi "Слова без решения - просто шум.."
         voice "audio/Hamayumi/nightass/34.mp3"
         hide hamayumi_T
         show hamayumi_up at left
-        hamayumi "А шум — идеальная маскировка страха."
+        hamayumi "А шум - идеальная маскировка страха."
 
     hide nighstess
     with dissolve

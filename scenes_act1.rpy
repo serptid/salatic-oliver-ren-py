@@ -184,13 +184,13 @@ label act1_entry:
     hamayumi "Киберспейс не держит силой."
 
     hide hamayumi_forw
-    show hamayumi_break at left
+    show hamayumi_you at left
     voice "audio/Hamayumi/act_1/19.mp3"
     hamayumi "Он ждёт, что ты сделаешь выбор."
 
     pause 0.5
 
-    hide hamayumi_break
+    hide hamayumi_you
     show hamayumi_cry at left
     voice "audio/Hamayumi/act_1/20.mp3"
     hamayumi "Но не сейчас."

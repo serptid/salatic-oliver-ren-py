@@ -55,10 +55,10 @@ label branch_hospital:
 
     voice "audio/Hamayumi/klinika/5.mp3"
     hide hamayumi_forw
-    show hamayumi_break at left
+    show hamayumi_you at left
     hamayumi "Слышишь?"
     voice "audio/Hamayumi/klinika/6.mp3"
-    hide hamayumi_break
+    hide hamayumi_you
     show hamayumi_cry at left
     hamayumi "Факты - это форма контроля."
     voice "audio/Hamayumi/klinika/7.mp3"
@@ -111,7 +111,7 @@ label branch_hospital:
             doctor "Сомнение - не провал. Это наблюдение."
             voice "audio/Hamayumi/klinika/14.mp3"
             hide hamayumi_you
-            show hamayumi_break at left
+            show hamayumi_you at left
             hamayumi "Честность держит тебя целым."
 
     doctor "Мы попробуем простую штуку."
@@ -128,7 +128,7 @@ label branch_hospital:
             doctor "Правильно."
             doctor "Не фантазировать. Проверять."
             voice "audio/Hamayumi/klinika/15.mp3"
-            hide hamayumi_break
+            hide hamayumi_you
             show hamayumi_T at left
             hamayumi "Проверка - это выбор, который не зависит от страха."
 
@@ -136,7 +136,7 @@ label branch_hospital:
             doctor "Для вас - важно."
             doctor "Это основа ориентации."
             voice "audio/Hamayumi/klinika/16.mp3"
-            hide hamayumi_break
+            hide hamayumi_you
             show hamayumi_cry at left
             hamayumi "Он ставит рамку."
             voice "audio/Hamayumi/klinika/17.mp3"
@@ -148,12 +148,12 @@ label branch_hospital:
             doctor "Хорошо."
             doctor "Но мы это зафиксируем по карте."
             voice "audio/Hamayumi/klinika/18.mp3"
-            hide hamayumi_break
+            hide hamayumi_you
             show hamayumi_forw at left
             hamayumi "Удобно."
             voice "audio/Hamayumi/klinika/19.mp3"
             hide hamayumi_forw
-            show hamayumi_break at left
+            show hamayumi_you at left
             hamayumi "Когда за тебя фиксируют - ты перестаёшь держать сам."
 
     doctor "Ещё вопрос."
@@ -168,7 +168,7 @@ label branch_hospital:
             doctor "Мы не будем спорить с ним."
             doctor "Мы научимся проверять его."
             voice "audio/Hamayumi/klinika/20.mp3"
-            hide hamayumi_break
+            hide hamayumi_you
             show hamayumi_cry at left
             hamayumi "Он не пытается меня убить."
             voice "audio/Hamayumi/klinika/21.mp3"
@@ -181,7 +181,7 @@ label branch_hospital:
             doctor "Хорошо."
             doctor "Тогда вам будет проще."
             voice "audio/Hamayumi/klinika/22.mp3"
-            hide hamayumi_break
+            hide hamayumi_you
             show hamayumi_cry at left
             hamayumi "Ложь ради простоты."
             voice "audio/Hamayumi/klinika/23.mp3"
@@ -211,10 +211,10 @@ label branch_hospital:
 
     voice "audio/Hamayumi/klinika/25.mp3"
     hide hamayumi_T
-    show hamayumi_break at left
+    show hamayumi_you at left
     hamayumi "Ты стираешь меня словами."
     voice "audio/Hamayumi/klinika/26.mp3"
-    hide hamayumi_break
+    hide hamayumi_you
     show hamayumi_cry at left
     hamayumi "Но пока не до конца."
 
@@ -245,10 +245,10 @@ label branch_hospital:
     hamayumi "Это и есть таймер."
     voice "audio/Hamayumi/klinika/31.mp3"
     hide hamayumi_forw
-    show hamayumi_break at left
+    show hamayumi_you at left
     hamayumi "У тебя будет момент, когда станет легче."
     voice "audio/Hamayumi/klinika/32.mp3"
-    hide hamayumi_break
+    hide hamayumi_you
     show hamayumi_cry at left
     hamayumi "И ты решишь, что победил."
     voice "audio/Hamayumi/klinika/33.mp3"
@@ -262,7 +262,7 @@ label branch_hospital:
         "Позвать врача и попросить удалить кибспек":
             voice "audio/Hamayumi/klinika/34.mp3"
             hide hamayumi_you
-            show hamayumi_break at left
+            show hamayumi_you at left
             hamayumi "..."
             "Тишина становится слишком удобной."
             "В голове появляется мысль: 'пусть решат за меня'."
@@ -285,7 +285,7 @@ label branch_hospital:
         "Стерпеть":
             voice "audio/Hamayumi/klinika/38.mp3"
             hide hamayumi_you
-            show hamayumi_break at left
+            show hamayumi_you at left
             hamayumi "Понял."
             "Молчание не выбирает сторону."
             "Но молчание - идеальная почва для чужих выводов."
@@ -301,7 +301,7 @@ label branch_hospital:
     oliver "Мне никто не говорил..."
 
     voice "audio/Hamayumi/klinika/39.mp3"
-    hide hamayumi_break
+    hide hamayumi_you
     show hamayumi_up at left
     hamayumi "Момент, где реальность становится сценой."
 
@@ -318,7 +318,7 @@ label branch_hospital:
     hamayumi "Слушай формулировки."
     voice "audio/Hamayumi/klinika/41.mp3"
     hide hamayumi_forw
-    show hamayumi_break at left
+    show hamayumi_you at left
     hamayumi "'Проще' - это не 'лучше'."
 
     oliver "Что за процедура?"
@@ -327,7 +327,7 @@ label branch_hospital:
     nurse "Чтобы вы перестали придавать значение... лишним конструкциям."
 
     voice "audio/Hamayumi/klinika/42.mp3"
-    hide hamayumi_break
+    hide hamayumi_you
     show hamayumi_cry at left
     hamayumi "Слышишь?"
     voice "audio/Hamayumi/klinika/43.mp3"
@@ -349,10 +349,10 @@ label branch_hospital:
             nurse "Не беспокойтесь."
             voice "audio/Hamayumi/klinika/45.mp3"
             hide hamayumi_T
-            show hamayumi_break at left
+            show hamayumi_you at left
             hamayumi "Это выбор."
             voice "audio/Hamayumi/klinika/46.mp3"
-            hide hamayumi_break
+            hide hamayumi_you
             show hamayumi_cry at left
             hamayumi "Просто не твой."
 
@@ -361,11 +361,9 @@ label branch_hospital:
             nurse "Мы можем объяснить."
             nurse "Но вы уверены, что хотите деталей?"
             voice "audio/Hamayumi/klinika/47.mp3"
-            hide hamayumi_cry
-            show hamayumi_forw at left
             hamayumi "Правильный ход."
             voice "audio/Hamayumi/klinika/48.mp3"
-            hide hamayumi_forw
+            hide hamayumi_cry
             show hamayumi_you at left
             hamayumi "Детали возвращают власть."
 
@@ -413,7 +411,7 @@ label branch_hospital:
     hamayumi "Потому что это и есть ядро."
     voice "audio/Hamayumi/klinika/54.mp3"
     hide hamayumi_forw
-    show hamayumi_break at left
+    show hamayumi_you at left
     hamayumi "Только в белом халате."
 
     menu:
@@ -424,7 +422,7 @@ label branch_hospital:
             oliver "Дата. Место. Имя. ЯКОРЬ..."
             oliver "Я проверяю, а не угадываю."
             voice "audio/Hamayumi/klinika/55.mp3"
-            hide hamayumi_break
+            hide hamayumi_you
             show hamayumi_you at left
             hamayumi "Вот это перепрошивка."
             voice "audio/Hamayumi/klinika/56.mp3"
@@ -436,19 +434,19 @@ label branch_hospital:
             "Тепло разливается по голове."
             "Мысли становятся мягкими."
             voice "audio/Hamayumi/klinika/57.mp3"
-            hide hamayumi_break
+            hide hamayumi_you
             show hamayumi_cry at left
             hamayumi "Вот так и делают 'легко'."
             voice "audio/Hamayumi/klinika/58.mp3"
             hide hamayumi_cry
-            show hamayumi_break at left
+            show hamayumi_you at left
             hamayumi "Когда легко - ты перестаёшь держать форму."
 
         "Закричать, вырваться, сломать.":
             "Руки дрожат."
             "Свет режет."
             voice "audio/Hamayumi/klinika/59.mp3"
-            hide hamayumi_break
+            hide hamayumi_you
             show hamayumi_T at left
             hamayumi "Сопротивление без направления."
             voice "audio/Hamayumi/klinika/60.mp3"
@@ -482,10 +480,10 @@ label branch_hospital:
         $ hospital_done = False
         voice "audio/Hamayumi/klinika/64.mp3"
         hide hamayumi_forw
-        show hamayumi_break at left
+        show hamayumi_you at left
         hamayumi "Ты сомневаешься."
         voice "audio/Hamayumi/klinika/65.mp3"
-        hide hamayumi_break
+        hide hamayumi_you
         show hamayumi_cry at left
         hamayumi "Значит, связь ещё держится."
         voice "audio/Hamayumi/klinika/66.mp3"
