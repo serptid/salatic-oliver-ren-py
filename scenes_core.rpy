@@ -116,7 +116,7 @@ label core_select:
                 "Отмена.":
                     $ core_cancel_count += 1
                     artemka "Отмена принята."
-                    jump core_select
+                    jump end_virus
 
         "Стабилизация: непрерывное существование с другом" if nighstess_done:
             artemka "Параметры: закрепление в среде. Режим ядра."
@@ -139,7 +139,7 @@ label core_select:
                 "Отмена.":
                     $ core_cancel_count += 1
                     artemka "Отмена принята."
-                    jump core_select
+                    jump end_virus
 
         "Стабилизация: пауза без выбора с мечтой" if sand_done:
             artemka "Параметры: нейтральный контур. Снижение требований."
@@ -162,7 +162,7 @@ label core_select:
                 "Отмена.":
                     $ core_cancel_count += 1
                     artemka "Отмена принята."
-                    jump core_select
+                    jump end_virus
 
         "Стабилизация: нормализация реальности с самим собой" if hospital_done:
 
@@ -181,4 +181,4 @@ label core_select:
                 "Отмена.":
                     $ core_cancel_count += 1
                     artemka "Отмена принята."
-                    jump core_select
+                    jump end_virus
