@@ -38,14 +38,14 @@ label act2_entry:
 
     voice "audio/Hamayumi/act_2/5.mp3"
     hide hamayumi_forw
-    show hamayumi_break at center
+    show hamayumi_you at center
     hamayumi "Потому что обещание всегда идёт раньше цены."
 
     "Ты чувствуешь, как воздух становится плотнее - как перед входом в новую зону."
     "Карта исчезает."
     "Остаётся только шаг."
 
-    hide hamayumi_break
+    hide hamayumi_you
     jump branch_quins
 
 
@@ -101,11 +101,11 @@ label act2_after_quins:
 
     voice "audio/Hamayumi/act_2/12.mp3"
     hide hamayumi_forw
-    show hamayumi_break at center
+    show hamayumi_you at center
     hamayumi "Дальше Nighstess."
 
     voice "audio/Hamayumi/act_2/13.mp3"
-    hide hamayumi_break
+    hide hamayumi_you
     show hamayumi_cry at center
     hamayumi "Он не обещает. Он упрощает."
 
@@ -164,11 +164,11 @@ label act2_after_nighstess:
 
     voice "audio/Hamayumi/act_2/19.mp3"
     hide hamayumi_forw
-    show hamayumi_break at center
+    show hamayumi_you at center
     hamayumi "Теперь Sand."
 
     voice "audio/Hamayumi/act_2/20.mp3"
-    hide hamayumi_break
+    hide hamayumi_you
     show hamayumi_cry at center
     hamayumi "Если Nighstess учит принять - Sand учит не требовать."
 
@@ -225,11 +225,11 @@ label act2_after_sand:
 
     voice "audio/Hamayumi/act_2/26.mp3"
     hide hamayumi_forw
-    show hamayumi_break at center
+    show hamayumi_you at center
     hamayumi "Следующий переход - не прогулка."
 
     voice "audio/Hamayumi/act_2/27.mp3"
-    hide hamayumi_break
+    hide hamayumi_you
     show hamayumi_cry at center
     hamayumi "Это будет попытка перепрошить то, как ты называешь реальность."
 
@@ -292,8 +292,8 @@ label act2_transition:
 
     voice "audio/Hamayumi/act_2/33.mp3"
     hide hamayumi_forw
-    show hamayumi_break at center
+    show hamayumi_you at center
     hamayumi "Там будет только то, что ты закрепил."
 
-    hide hamayumi_break
+    hide hamayumi_you
     jump act3_entry

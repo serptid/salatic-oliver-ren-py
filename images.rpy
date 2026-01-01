@@ -28,6 +28,11 @@ image bg sand6 = Transform("gui/images/bg/sand6.png", xysize=(SW, SH))
 image bg sand7 = Transform("gui/images/bg/sand7.png", xysize=(SW, SH))
 image bg hospital_corridor = Transform("gui/images/bg/hospital_corridor.png", xysize=(SW, SH))
 image bg hospital_window = Transform("gui/images/bg/window.png", xysize=(SW, SH))
+image bg cyberspace_minecraft = Transform("gui/images/bg/cyberspasce_minecraft.png", xysize=(SW, SH))
+image bg cyberspasce_teleport = Transform("gui/images/bg/cyberspasce_teleport.png", xysize=(SW, SH))
+image bg cyberspace_good_street = Transform("gui/images/bg/cyberspace_good_street.png", xysize=(SW, SH))
+image bg cyberspace_pause_good = Transform("gui/images/bg/cyberspace_pause_good.png", xysize=(SW, SH))
+
 
 
 #Персонажи

@@ -145,7 +145,7 @@ label branch_quins:
         "Убежать что есть мочи":
             zombi "Установка началась."
             voice "audio/Hamayumi/quins/5.mp3"
-            show hamayumi at left
+            show hamayumi at center
             hamayumi "..."
             hide hamayumi
             quins "Эй. Слушай меня."

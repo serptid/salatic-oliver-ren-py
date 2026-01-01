@@ -40,10 +40,10 @@ label act3_entry:
     hamayumi "Да."
     voice "audio/Hamayumi/act_3/5.mp3"
     hide hamayumi_forw
-    show hamayumi_break at left
+    show hamayumi_you at left
     hamayumi "Но без ударов."
     voice "audio/Hamayumi/act_3/6.mp3"
-    hide hamayumi_break
+    hide hamayumi_you
     show hamayumi_cry at left
     hamayumi "Только попытки назвать тебя вместо тебя."
 
@@ -116,10 +116,10 @@ label act3_entry:
     # --- Финальный 'файт'-вывод в 2–3 реплики ---
     voice "audio/Hamayumi/act_3/12.mp3"
     hide hamayumi_forw
-    show hamayumi_break at left
+    show hamayumi_you at left
     hamayumi "Смотри:"
     voice "audio/Hamayumi/act_3/13.mp3"
-    hide hamayumi_break
+    hide hamayumi_you
     show hamayumi_cry at left
     hamayumi "Выход, принятие, пауза, нормализация."
     voice "audio/Hamayumi/act_3/14.mp3"
@@ -130,7 +130,7 @@ label act3_entry:
 
     stop music fadeout 1.5
 
-    scene bg black
+    scene  black
     with fade
 
     "Впереди - CORE NODE."
